@@ -1,5 +1,7 @@
 # Jogo-GGJ
 
+![Team photo: From top to bottom, left to right: Anderson Frasão, Fernado Kiotheka, Bruno Krugel, Lucas Araujo, Muriki Gusmão, Bruno dal Pontte](team-photo.jpg)
+
 The Global Game Jam® (GGJ) is a 501(c)(3) nonprofit registered in the state of California and our mission is to empower all individuals worldwide to learn, experiment, and create together through the medium of games in a safe and welcoming environment.
 
 # Updates
