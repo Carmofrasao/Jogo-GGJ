@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7tb6dntjsj5l"
-path="res://.godot/imported/icon.svg-f7d232045834021a51285cd1beefad13.ctex"
+uid="uid://dkuvfd8wlypl3"
+path="res://.godot/imported/bubble-water.png-091f0b591542963107abad7b90e02114.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arts/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-f7d232045834021a51285cd1beefad13.ctex"]
+source_file="res://arts/bubble-water.png"
+dest_files=["res://.godot/imported/bubble-water.png-091f0b591542963107abad7b90e02114.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
