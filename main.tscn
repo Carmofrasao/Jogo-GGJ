@@ -1,14 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bghrd3ht05i7w"]
+[gd_scene load_steps=3 format=3 uid="uid://bghrd3ht05i7w"]
 
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="1_quam5"]
+[ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://attractor.tscn" id="2_jjdj2"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_quam5")]
-position = Vector2(272, 144)
+[node name="Player" parent="." instance=ExtResource("1_quam5")]
+position = Vector2(-176, -168)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 24)
+zoom = Vector2(0.5, 0.5)
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(416, 112)
-polygon = PackedVector2Array(32, 16, 112, 8, 120, 96, 8, 96)
+[node name="Attractor" parent="." instance=ExtResource("2_jjdj2")]
+position = Vector2(128, -256)
+rotation = -0.507891
+
+[node name="Attractor3" parent="." instance=ExtResource("2_jjdj2")]
+position = Vector2(624, 544)
+rotation = -2.41205

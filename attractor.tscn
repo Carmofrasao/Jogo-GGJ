@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkc4bee4rw8lh"]
+
+[ext_resource type="Script" path="res://Attractor.cs" id="1_3806c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boldo"]
+size = Vector2(82, 410)
+
+[node name="Attractor" type="Area2D"]
+script = ExtResource("1_3806c")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 40, 24, 40, 24, 64, 40, 64, 40, 40, 64, 40, 64, 24, 40, 24, 40, 0, 24, 0, 24, 24, 0, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(31, 195)
+shape = SubResource("RectangleShape2D_boldo")
