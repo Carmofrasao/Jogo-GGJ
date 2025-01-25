@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctsv7aud7onl8"]
+[gd_scene load_steps=7 format=3 uid="uid://ctsv7aud7onl8"]
 
 [ext_resource type="Texture2D" uid="uid://c82f8s3o5cxgx" path="res://arts/bg/space/parallax-space-backgound.png" id="1_pg2ih"]
 [ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
 [ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://planet.tscn" id="3_y231g"]
 [ext_resource type="Texture2D" uid="uid://iqxjddew2e8w" path="res://arts/bg/space/parallax-space-ring-planet.png" id="5_f6bhy"]
+[ext_resource type="Script" path="res://KeyUpDownAnimationTimer.cs" id="6_cii43"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,21 +25,11 @@ position = Vector2(112, 1096)
 [node name="Player4" parent="." instance=ExtResource("3_ttrsp")]
 position = Vector2(584, 1072)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1848, 888)
-rotation = 1.5708
-scale = Vector2(7, 7)
-texture = ExtResource("5_f6bhy")
-
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(1848, 888)
 rotation = 1.5708
 scale = Vector2(7, 7)
 texture = ExtResource("5_f6bhy")
-
-[node name="Planet" parent="." instance=ExtResource("3_y231g")]
-z_index = -1
-position = Vector2(416, 504)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -62,3 +53,13 @@ motion_mirroring = Vector2(2560, 2560)
 texture_repeat = 2
 texture = ExtResource("2_h6pds")
 centered = false
+
+[node name="Planet" parent="." instance=ExtResource("3_y231g")]
+position = Vector2(720, 592)
+
+[node name="KeyUpDownAnimationTimer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+script = ExtResource("6_cii43")
+
+[connection signal="timeout" from="KeyUpDownAnimationTimer" to="KeyUpDownAnimationTimer" method="OnTimeout"]

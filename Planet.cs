@@ -14,7 +14,6 @@ public partial class Planet : Area2D
         if (Input.IsActionPressed("ui_down")) {
             Factor = (float)Mathf.Clamp(Factor-100*delta, -30, 30);
         }
-        GD.Print(Factor);
     }
 
     public override void _PhysicsProcess(double delta)
