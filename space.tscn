@@ -39,15 +39,17 @@ texture = ExtResource("2_h6pds")
 centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+rotation = 1.5708
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(3151, 1040)
-scale = Vector2(9.10227, 9.84483)
+position = Vector2(353, -3169)
+scale = Vector2(3.99985, 4.02838)
 texture = ExtResource("4_luo1j")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+rotation = 1.5708
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2(6856, 1168)
-scale = Vector2(19.4412, 9.92609)
+position = Vector2(832, -5858)
+scale = Vector2(9.16864, 6.10002)
 texture = ExtResource("5_f6bhy")
