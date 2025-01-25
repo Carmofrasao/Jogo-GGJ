@@ -18,7 +18,6 @@ public partial class Bubble : CharacterBody2D
             velocity.Y += 50.0f*(random.NextSingle() - 0.5f);
         }
         Velocity = velocity;
-        GD.Print(velocity.X + " " + velocity.Y);
         MoveAndSlide();
     }
 }
