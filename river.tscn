@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bffapesbn65jb"]
+
+[ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="1_3wjg4"]
+[ext_resource type="Texture2D" uid="uid://cajprdahrlm6t" path="res://arts/bg/river/river.png" id="1_an3ip"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(735, -849)
+scale = Vector2(3.54004, 3.54004)
+texture = ExtResource("1_an3ip")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+
+[node name="Player" parent="." instance=ExtResource("1_3wjg4")]
+position = Vector2(696, 712)
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(600, 300)
+zoom = Vector2(0.5, 0.5)
