@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cujve3lmqvb53"]
+
+[ext_resource type="Texture2D" uid="uid://c82f8s3o5cxgx" path="res://arts/bg/space/parallax-space-backgound.png" id="1_pg2ih"]
+[ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
+[ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
+[ext_resource type="Texture2D" uid="uid://c2rdg2ahg4gux" path="res://arts/bg/space/parallax-space-big-planet.png" id="4_luo1j"]
+[ext_resource type="Texture2D" uid="uid://iqxjddew2e8w" path="res://arts/bg/space/parallax-space-ring-planet.png" id="5_f6bhy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("3_ttrsp")]
+position = Vector2(-482, 707)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(305, -30)
+zoom = Vector2(0.5, 0.5)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+motion_mirroring = Vector2(5001.81, 2942.24)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.243137, 0.388235, 0.505882, 1)
+texture_filter = 2
+texture_repeat = 2
+scale = Vector2(18.3891, 18.3891)
+texture = ExtResource("1_pg2ih")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2560, 2560)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_repeat = 2
+texture = ExtResource("2_h6pds")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(3151, 1040)
+scale = Vector2(9.10227, 9.84483)
+texture = ExtResource("4_luo1j")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(6856, 1168)
+scale = Vector2(19.4412, 9.92609)
+texture = ExtResource("5_f6bhy")
