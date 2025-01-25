@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Jogo-GGJ"
 run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
@@ -28,3 +28,12 @@ project/assembly_name="Jogo-GGJ"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[physics]
+
+2d/default_gravity=100.0
+2d/default_gravity_vector=Vector2(1, 0)
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

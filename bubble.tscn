@@ -1,15 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgwg1uyt6fqa5"]
+[gd_scene load_steps=5 format=3 uid="uid://cgwg1uyt6fqa5"]
+
+[ext_resource type="Script" path="res://Bubble.cs" id="1_nejcm"]
+[ext_resource type="Texture2D" uid="uid://dkuvfd8wlypl3" path="res://arts/bubble-water.png" id="2_g02u1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h7d1v"]
 radius = 32.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_d31xh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g02u1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
+script = ExtResource("1_nejcm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_h7d1v")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(-32, -32)
-color = Color(0, 0.315259, 0.688751, 1)
-polygon = PackedVector2Array(48, 8, 56, 16, 64, 32, 56, 48, 48, 56, 32, 64, 16, 56, 8, 48, 0, 32, 8, 16, 16, 8, 32, 0)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.53674e-07, 9.53674e-07)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_d31xh")
