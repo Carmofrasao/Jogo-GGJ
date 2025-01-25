@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq0rdac56mbii"]
+
+[ext_resource type="Script" path="res://Planet.cs" id="1_unotd"]
+[ext_resource type="Texture2D" uid="uid://c2rdg2ahg4gux" path="res://arts/bg/space/parallax-space-big-planet.png" id="1_y4lfn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d8ukr"]
+radius = 44.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqbji"]
+radius = 705.634
+
+[node name="Planet" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_unotd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(4, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_d8ukr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_y4lfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tqbji")
