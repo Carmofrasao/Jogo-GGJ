@@ -17,7 +17,7 @@ public partial class Attractor : Area2D
     {
         foreach (var bubble in GetOverlappingBodies()) {
             Vector2 velocity = ((Bubble)bubble).Velocity;
-            velocity += 50.0f * Vector2.Down.Rotated(GetTransform().Rotation);
+            velocity += 100.0f * Vector2.Down.Rotated(GetTransform().Rotation);
             ((Bubble)bubble).Velocity = velocity;
         }
     }
