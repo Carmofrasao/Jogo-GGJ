@@ -1,29 +1,67 @@
 # Jogo-GGJ
 
-![Team photo: From top to bottom, left to right: Anderson Frasão, Fernado Kiotheka, Bruno Krugel, Lucas Araujo, Muriki Gusmão, Bruno dal Pontte](team-photo.jpg)
-
 The Global Game Jam® (GGJ) is a 501(c)(3) nonprofit registered in the state of California and our mission is to empower all individuals worldwide to learn, experiment, and create together through the medium of games in a safe and welcoming environment.
 
-# Updates
+## Description
 
-## Day 1
+This project was developed during the Global Game Jam 2025, a worldwide event that brings together game developers to create games in a short period of time.
 
-### What we did
+The event took place at PUCPR, in Curitiba, Brazil, from January 24 to January 26, 2025.
 
-The main theme is "bubble", so we think about a platform game.
+The theme of the event was "bubble".
 
-But, we walked through the scope to beat an high score and take the bubble to the maximun possible distance.
-This type of game is similar to the mobile game Jetpack Joyride.
+## Team
 
-Basically, the bubble starts and walk right the screen and beyond.
-The player can control other objects in the scenario to affect the bubble, allowing it to go more far in the game.
-Therefore, some interations will apply a penalty to the bubble making it to go slow or to consume more its "energy bar"
+<!-- In this section will briefly introduce the team members. -->
+<!-- The main document will be the `docs/team.md` file. -->
 
-When the bubble's bar depletes, the game ends and go back to the start screen.
+Our team is composed of six members:
 
-We decided to use Godot 4 with C# and have done a brainstorming with a bunch of good and bad ideas.
+- [Anderson Frasão](docs/team.md#anderson-frasão)
+- [Bruno Krugel](docs/team.md#bruno-krugel)
+- [Bruno dal Pontte](docs/team.md#bruno-dal-pontte)
+- [Fernando Kiotheka](docs/team.md#fernando-kiotheka)
+- [Lucas Araujo](docs/team.md#lucas-araujo)
+- [Muriki Gusmão](docs/team.md#muriki-gusmão)
 
-### To Do
+![Team photo: From top to bottom, left to right: Anderson Frasão, Fernando Kiotheka, Bruno Krugel, Lucas Araujo, Muriki Gusmão, Bruno dal Pontte](team-photo.jpg)
 
-- [ ] Think about the possible scenarios
-- [ ] What are the possible external factors that can affect the bubble?
+We are all students from the Computer Science course at UFPR.
+
+To know more about us, please check the [team.md](docs/team.md) file.
+
+## Game
+
+### Title
+
+### Description
+
+### Controls
+
+### How to play
+
+### Screenshots
+
+## How to install
+
+Instructions on how to run the game. For more detailed instructions, check the [install.md](docs/install.md) file.
+
+### Requirements
+
+### Instructions
+
+## Credits
+
+We have used some free assets in this project. The credits for they all are described in the [credits.md](docs/credits.md) file.
+
+Go check it out to see how awesome these creators are!
+
+## Special thanks
+
+### Global Game Jam
+
+### PUCPR
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
