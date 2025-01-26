@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Net.Http;
 
 public partial class Bubble : CharacterBody2D
 {
@@ -8,6 +9,9 @@ public partial class Bubble : CharacterBody2D
 
     [Export]
     public float TargetY = 0f;
+
+    [Signal]
+    public delegate void HitEventHandler();
 
     public override void _PhysicsProcess(double delta)
     {
@@ -21,5 +25,8 @@ public partial class Bubble : CharacterBody2D
         }
         Velocity = velocity;
         MoveAndSlide();
+        for (int i = 0; i < GetSlideCollisionCount(); i++) {
+            EmitSignal(SignalName.Hit);
+        }
     }
 }

@@ -7,13 +7,11 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mujac")
+firstScene = ExtResource("1_eakrw")
 
 [node name="HUD" parent="." instance=ExtResource("1_psyw5")]
 
-[node name="Sky" parent="." instance=ExtResource("1_eakrw")]
-
 [node name="Bubble" parent="." instance=ExtResource("3_56lgj")]
-position = Vector2(425, 594)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Bubble"]
@@ -22,3 +20,4 @@ limit_top = -572
 limit_bottom = 1600
 
 [connection signal="StartGame" from="HUD" to="." method="StartGame"]
+[connection signal="Hit" from="Bubble" to="." method="GameOver"]

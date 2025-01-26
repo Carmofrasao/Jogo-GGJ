@@ -11,9 +11,13 @@ public partial class Hud : CanvasLayer
         GetNode<CanvasGroup>("TitleScreen").Hide();
     }
 
+    public void ShowTitleScreen()
+    {
+        GetNode<CanvasGroup>("TitleScreen").Show();
+    }
+
     public void StartButtonPressed()
     {
-        GetNode<CanvasGroup>("TitleScreen").GetNode<Button>("StartButton").Hide();
         EmitSignal(SignalName.StartGame);
     }
 }
