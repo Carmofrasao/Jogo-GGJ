@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbmrjf7jafr0l"]
+[gd_scene load_steps=4 format=3 uid="uid://dbmrjf7jafr0l"]
 
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="1_cw6dk"]
+[ext_resource type="Script" path="res://levels/LevelTransitionLeft.cs" id="1_jyqcp"]
 [ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://objects/attractor.tscn" id="2_a87kc"]
 
 [node name="LevelTransitionLeft" type="Node2D"]
+script = ExtResource("1_jyqcp")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
 
 [node name="Bubble" parent="." instance=ExtResource("1_cw6dk")]
 

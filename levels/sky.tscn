@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://cd8a6iu6k7xlr"]
+[gd_scene load_steps=24 format=3 uid="uid://cd8a6iu6k7xlr"]
 
 [ext_resource type="Script" path="res://levels/Sky.cs" id="1_i4wvf"]
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="1_yp3ml"]
+[ext_resource type="PackedScene" uid="uid://ctsv7aud7onl8" path="res://levels/space.tscn" id="2_h0v2p"]
 [ext_resource type="Texture2D" uid="uid://bqqftphax31er" path="res://arts/bg/cloud-and-sky/2.png" id="2_y45se"]
 [ext_resource type="Texture2D" uid="uid://dwvo48y4lm65l" path="res://arts/bg/cloud-and-sky/3.png" id="3_iktsl"]
 [ext_resource type="Texture2D" uid="uid://dgenoamy0m521" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_2.png" id="4_i4vsq"]
@@ -10,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://objects/attractor.tscn" id="8_34xqh"]
 [ext_resource type="PackedScene" uid="uid://ncfbd6wcxa0y" path="res://enemies/bird.tscn" id="9_5dbyp"]
 [ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="9_psf8w"]
-[ext_resource type="PackedScene" uid="uid://cshoivk8bmdyj" path="res://enemies/drone.tscn" id="9_thtuw"]
+[ext_resource type="PackedScene" path="res://enemies/drone.tscn" id="9_thtuw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jwo8n"]
 atlas = ExtResource("9_psf8w")
@@ -87,8 +88,12 @@ animations = [{
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g2eom"]
 normal = Vector2(0, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8b3c"]
+size = Vector2(3640, 160)
+
 [node name="Sky" type="Node2D"]
 script = ExtResource("1_i4wvf")
+nextScene = ExtResource("2_h0v2p")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -652,3 +657,15 @@ collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpBoundary"]
 shape = SubResource("WorldBoundaryShape2D_g2eom")
+
+[node name="WinFlag" type="Area2D" parent="."]
+visibility_layer = 0
+position = Vector2(8968, 176)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinFlag"]
+position = Vector2(23.9999, 24.0005)
+shape = SubResource("RectangleShape2D_y8b3c")
+
+[connection signal="body_entered" from="WinFlag" to="." method="_on_win_flag"]
+[connection signal="body_exited" from="WinFlag" to="." method="_on_win_flag"]
