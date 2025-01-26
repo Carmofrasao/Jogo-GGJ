@@ -1,7 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://ynvldh8qrkao"]
+[gd_scene load_steps=11 format=3 uid="uid://ynvldh8qrkao"]
 
 [ext_resource type="Texture2D" uid="uid://e4e05xmncrrp" path="res://arts/bg/house/house.jpg" id="1_8ymun"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="2_skh1v"]
+[ext_resource type="Texture2D" uid="uid://cmewebtinc2bp" path="res://arts/bg/house/cat.png" id="3_ecjxk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8bbo"]
+atlas = ExtResource("3_ecjxk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugoui"]
+atlas = ExtResource("3_ecjxk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je65c"]
+atlas = ExtResource("3_ecjxk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t17h"]
+atlas = ExtResource("3_ecjxk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_665wg"]
+atlas = ExtResource("3_ecjxk")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46dhg"]
+atlas = ExtResource("3_ecjxk")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hjr5w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8bbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugoui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je65c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1t17h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_665wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46dhg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,3 +70,8 @@ position = Vector2(-482, 707)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(305, -30)
 zoom = Vector2(0.5, 0.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2488.75, 1066.25)
+scale = Vector2(20.0313, 20.0313)
+sprite_frames = SubResource("SpriteFrames_hjr5w")
