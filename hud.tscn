@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyr8vvt3it5s4"]
+[gd_scene load_steps=4 format=3 uid="uid://dyr8vvt3it5s4"]
 
+[ext_resource type="Script" path="res://Hud.cs" id="1_5q30y"]
 [ext_resource type="Texture2D" uid="uid://duac1b65ly828" path="res://arts/bg/hud_bg/HUD_background.jpg" id="1_brks5"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="2_gvvwa"]
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_5q30y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(639.901, 360.062)
@@ -11,7 +13,7 @@ scale = Vector2(0.209491, 0.244124)
 texture = ExtResource("1_brks5")
 
 [node name="Player" parent="." instance=ExtResource("2_gvvwa")]
-position = Vector2(650, 330)
+position = Vector2(662, 349)
 
 [node name="GameName" type="Label" parent="."]
 anchors_preset = 14
@@ -28,16 +30,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="StartButton" type="Button" parent="."]
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = 157.5
-offset_right = 48.0
-offset_bottom = 188.5
+anchor_bottom = 1.0
+offset_left = -167.5
+offset_top = -191.0
+offset_right = 167.5
+offset_bottom = -100.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 60
 text = "Start Game"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
