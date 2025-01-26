@@ -1,7 +1,7 @@
 [gd_scene load_steps=53 format=3 uid="uid://bffapesbn65jb"]
 
-[ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="1_3wjg4"]
 [ext_resource type="Texture2D" uid="uid://cajprdahrlm6t" path="res://arts/bg/river/river.png" id="1_an3ip"]
+[ext_resource type="Script" path="res://levels/River.cs" id="1_ist21"]
 [ext_resource type="PackedScene" uid="uid://cm7rr5e46vq6q" path="res://enemies/shark.tscn" id="3_ro4kh"]
 [ext_resource type="Texture2D" uid="uid://chrudf4qlbol7" path="res://arts/bg/river/FAttack.png" id="4_22el6"]
 [ext_resource type="Texture2D" uid="uid://11ibf1wquxnu" path="res://arts/bg/river/Walk.png" id="5_1resy"]
@@ -366,60 +366,54 @@ animations = [{
 }]
 
 [node name="River" type="Node2D"]
+script = ExtResource("1_ist21")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(746, -779)
-scale = Vector2(30.451, 30.451)
+position = Vector2(-1536, -3424)
+scale = Vector2(30.1177, 30.451)
 texture = ExtResource("1_an3ip")
-
-[node name="Bubble" parent="." instance=ExtResource("1_3wjg4")]
-position = Vector2(688, 360)
-TargetY = -100.0
-metadata/_edit_group_ = true
-
-[node name="Camera2D" type="Camera2D" parent="Bubble"]
-zoom = Vector2(0.5, 0.5)
+centered = false
 
 [node name="Shark" parent="." instance=ExtResource("3_ro4kh")]
-position = Vector2(240, -64)
+position = Vector2(-478.5, -882.5)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(1359, -613)
+position = Vector2(640.5, -1431.5)
 scale = Vector2(4.4375, 4.4375)
 sprite_frames = SubResource("SpriteFrames_aaugq")
 animation = &"attak"
 frame_progress = 0.200381
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
-position = Vector2(-395, -1399)
+position = Vector2(-1113.5, -2217.5)
 scale = Vector2(4.27083, 4.27083)
 sprite_frames = SubResource("SpriteFrames_kvms0")
 animation = &"rigth"
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
-position = Vector2(1689, -1087)
+position = Vector2(970.5, -1905.5)
 scale = Vector2(2.58333, 2.58333)
 sprite_frames = SubResource("SpriteFrames_vq6g8")
 animation = &"rigth"
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
-position = Vector2(575, -621)
+position = Vector2(-143.5, -1439.5)
 scale = Vector2(2.58333, 2.58333)
 sprite_frames = SubResource("SpriteFrames_32wml")
 animation = &"right"
 
 [node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
-position = Vector2(1051.75, -1199.25)
+position = Vector2(333.25, -2017.75)
 scale = Vector2(2.88542, 2.88542)
 sprite_frames = SubResource("SpriteFrames_5o32v")
 animation = &"rigth"
 
 [node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
-position = Vector2(766, -207)
+position = Vector2(47.4998, -1025.5)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_hako6")
 animation = &"rigth"

@@ -17,8 +17,6 @@ metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Bubble"]
 zoom = Vector2(0.75, 0.75)
-limit_top = -572
-limit_bottom = 1600
 
 [node name="KeyUpDownAnimationTimer" type="Timer" parent="."]
 wait_time = 0.25

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr42d2j5ehmcw"]
+
+[ext_resource type="Texture2D" uid="uid://bobi1mk16fs5k" path="res://arts/Space_pixel/Satellite.png" id="1_r8rfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g14hb"]
+
+[node name="Satellite" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("1_r8rfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_g14hb")

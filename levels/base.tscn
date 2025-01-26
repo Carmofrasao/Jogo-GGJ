@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv5n7dr6sbri"]
+
+[ext_resource type="Script" path="res://levels/BaseLevel.cs" id="1_iapjk"]
+
+[node name="Base" type="Node2D"]
+script = ExtResource("1_iapjk")
+TargetX = null
+TargetY = null
