@@ -22,10 +22,9 @@ public partial class Main : Node2D
 		LoadScene(_currentScene);
 	}
 	
-	async public void LoadScene(PackedScene Scene){
+	public void LoadScene(PackedScene Scene){
 		if(_inScene){
-			_loadedScene.QueueFree();
-			await ToSignal(_loadedScene, SignalName.TreeExited);
+			_loadedScene.Free();
 			_inScene = false;
 		}
 		
@@ -45,7 +44,7 @@ public partial class Main : Node2D
 		bubble.TargetX = level.TargetX;
 		bubble.TargetY = level.TargetY;
 		bubble.Reset();
-        bubble.Start();
+		bubble.Start();
 		camera.LimitBottom = level.LimitBottom;
 		camera.LimitTop = level.LimitTop;
 		camera.LimitLeft = level.LimitLeft;
@@ -60,11 +59,10 @@ public partial class Main : Node2D
 		bubble.Burst();
 	}
 	
-	async private void Reset(){
+	private void Reset(){
 		GetNode<Hud>("HUD").ShowTitleScreen();
 		if(_inScene){
-			_loadedScene.QueueFree();
-			await ToSignal(_loadedScene, SignalName.TreeExited);
+			_loadedScene.Free();
 			_inScene = false;
 		}
 		var bubble = GetNode<Bubble>("Bubble");
