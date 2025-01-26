@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ynvldh8qrkao"]
+[gd_scene load_steps=14 format=3 uid="uid://ynvldh8qrkao"]
 
 [ext_resource type="Texture2D" uid="uid://e4e05xmncrrp" path="res://arts/bg/house/house.jpg" id="1_8ymun"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="2_skh1v"]
 [ext_resource type="Texture2D" uid="uid://cmewebtinc2bp" path="res://arts/bg/house/cat.png" id="3_ecjxk"]
+[ext_resource type="Texture2D" uid="uid://dbrr0qqpmbw0v" path="res://arts/fan/fan1.png" id="4_a078m"]
+[ext_resource type="Texture2D" uid="uid://cmhh0bdalgjsj" path="res://arts/fan/fan2.png" id="5_olkyy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8bbo"]
 atlas = ExtResource("3_ecjxk")
@@ -54,6 +56,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_c32s6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a078m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_olkyy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -66,6 +82,7 @@ texture = ExtResource("1_8ymun")
 
 [node name="Player" parent="." instance=ExtResource("2_skh1v")]
 position = Vector2(-482, 707)
+TargetX = 400.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(305, -30)
@@ -75,3 +92,11 @@ zoom = Vector2(0.5, 0.5)
 position = Vector2(2488.75, 1066.25)
 scale = Vector2(20.0313, 20.0313)
 sprite_frames = SubResource("SpriteFrames_hjr5w")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(5373, 1390)
+scale = Vector2(14.5, 14.5)
+sprite_frames = SubResource("SpriteFrames_c32s6")
+autoplay = "default"
+frame_progress = 0.929456
