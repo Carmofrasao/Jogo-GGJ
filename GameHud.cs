@@ -28,11 +28,12 @@ public partial class GameHud : CanvasLayer
     public void Start()
     {
         this.Show();
+        this._scoreValue = 0;
     }
 
     public void Reset()
     {
-        this._lastScoreValue = this._scoreValue;
+        this._lastScoreValue = Math.Max(this._lastScoreValue, this._scoreValue);
         this._scoreValue = 0;
         this.Hide();
     }

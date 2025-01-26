@@ -15,8 +15,8 @@ public partial class Space : Node2D, IBaseLevel
 	
 	public int LimitLeft { get; set; } = 0;
 	public int LimitRight { get; set; } = 10000000;
-	public int LimitTop { get; set; } = -950;
-	public int LimitBottom { get; set; } = 1024;
+	public int LimitTop { get; set; } = -2112;
+	public int LimitBottom { get; set; } = 10032;
 	
 	public void WinScene(){
 		EmitSignal(SignalName.TransitionScene, nextScene);

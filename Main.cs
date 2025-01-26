@@ -23,7 +23,6 @@ public partial class Main : Node2D
 	}
 	
 	public async void LoadScene(PackedScene Scene){
-		GD.Print("Loading scene " + Scene);
 		if(_inScene) {
 			_loadedScene.QueueFree();
 			await ToSignal(_loadedScene, SignalName.TreeExited);
@@ -46,7 +45,9 @@ public partial class Main : Node2D
 		bubble.TargetX = level.TargetX;
 		bubble.TargetY = level.TargetY;
 		bubble.Reset();
-		bubble.Start();
+		if (_currentScene != firstScene) {
+			bubble.Start();
+		}
 		camera.LimitBottom = level.LimitBottom;
 		camera.LimitTop = level.LimitTop;
 		camera.LimitLeft = level.LimitLeft;
