@@ -25,6 +25,4 @@ wait_time = 0.25
 autostart = true
 script = ExtResource("5_ewifk")
 
-[connection signal="StartGame" from="HUD" to="." method="StartGame"]
-[connection signal="Hit" from="Bubble" to="." method="GameOver"]
 [connection signal="timeout" from="KeyUpDownAnimationTimer" to="KeyUpDownAnimationTimer" method="OnTimeout"]

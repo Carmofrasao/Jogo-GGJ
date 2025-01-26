@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c525eqvrsiuqf"]
 
-[ext_resource type="Script" path="res://objects/Planet.cs" id="1_swmdf"]
+[ext_resource type="Script" path="res://objects/Sun.cs" id="1_3sern"]
 [ext_resource type="Texture2D" uid="uid://bjr43j24olv3h" path="res://arts/Space_pixel/Sun.png" id="2_6c86r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8ukr"]
@@ -11,7 +11,7 @@ radius = 800.0
 
 [node name="Sun" type="Area2D"]
 collision_layer = 0
-script = ExtResource("1_swmdf")
+script = ExtResource("1_3sern")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2(4, 4)
