@@ -513,7 +513,17 @@ rotation = -2.92692
 Factor = 100.0
 
 [node name="Attractor14" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2024, 736)
+position = Vector2(1736, 632)
+rotation = -2.92692
+Factor = 100.0
+
+[node name="Attractor79" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(1600, 600)
+rotation = -2.92692
+Factor = 100.0
+
+[node name="Attractor80" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(1472, 576)
 rotation = -2.92692
 Factor = 100.0
 
@@ -533,8 +543,18 @@ rotation = -1.83259
 Factor = 100.0
 
 [node name="Attractor15" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(1872, 48)
-rotation = -1.83259
+position = Vector2(2208, -176)
+rotation = 1.309
+Factor = 100.0
+
+[node name="Attractor77" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2248, -64)
+rotation = 1.309
+Factor = 100.0
+
+[node name="Attractor78" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2280, 56)
+rotation = 1.309
 Factor = 100.0
 
 [node name="Attractor40" parent="." instance=ExtResource("8_34xqh")]
