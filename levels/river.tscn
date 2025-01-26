@@ -1,17 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://bffapesbn65jb"]
+[gd_scene load_steps=12 format=3 uid="uid://bffapesbn65jb"]
 
 [ext_resource type="Texture2D" uid="uid://cajprdahrlm6t" path="res://arts/bg/river/river.png" id="1_an3ip"]
 [ext_resource type="Script" path="res://levels/River.cs" id="1_ist21"]
+[ext_resource type="PackedScene" uid="uid://cd8a6iu6k7xlr" path="res://levels/sky.tscn" id="2_0c0hh"]
 [ext_resource type="PackedScene" uid="uid://cm7rr5e46vq6q" path="res://enemies/shark.tscn" id="3_ro4kh"]
-[ext_resource type="PackedScene" uid="uid://cs4xphwsoxq51" path="res://enemies/fish_1.tscn" id="7_gvj8s"]
-[ext_resource type="PackedScene" uid="uid://c3ameldere6ru" path="res://enemies/fish_2.tscn" id="8_03jk4"]
-[ext_resource type="PackedScene" uid="uid://disgkko3cvsy0" path="res://enemies/fish_3.tscn" id="9_3t0n5"]
-[ext_resource type="PackedScene" uid="uid://bt1tc25kbedlo" path="res://enemies/fish_4.tscn" id="10_opbae"]
-[ext_resource type="PackedScene" uid="uid://cd1y38jrcuyw6" path="res://enemies/fish_5.tscn" id="11_tvsks"]
-[ext_resource type="PackedScene" uid="uid://di0s1oly2x2hm" path="res://enemies/fish_6.tscn" id="12_o2n3j"]
+[ext_resource type="PackedScene" uid="uid://cynq2e2xc88tf" path="res://enemies/fish_1.tscn" id="7_gvj8s"]
+[ext_resource type="PackedScene" uid="uid://bsadk57moxwka" path="res://enemies/fish_2.tscn" id="8_03jk4"]
+[ext_resource type="PackedScene" uid="uid://quaoq5kjh2dj" path="res://enemies/fish_3.tscn" id="9_3t0n5"]
+[ext_resource type="PackedScene" uid="uid://cc2mlx4e0uhf4" path="res://enemies/fish_4.tscn" id="10_opbae"]
+[ext_resource type="PackedScene" uid="uid://ynkasp17j8ej" path="res://enemies/fish_5.tscn" id="11_tvsks"]
+[ext_resource type="PackedScene" uid="uid://dfqno6i5h5ofl" path="res://enemies/fish_6.tscn" id="12_o2n3j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awt0i"]
+size = Vector2(2974.06, 213.005)
 
 [node name="River" type="Node2D"]
 script = ExtResource("1_ist21")
+nextScene = ExtResource("2_0c0hh")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -43,3 +48,16 @@ position = Vector2(-143.5, -1439.5)
 
 [node name="Fish6" parent="." instance=ExtResource("12_o2n3j")]
 position = Vector2(333.25, -2017.75)
+
+[node name="WinFlag" type="Area2D" parent="."]
+visibility_layer = 0
+position = Vector2(-1, -2652)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinFlag"]
+position = Vector2(-9.16357, -54.1313)
+rotation = 1.56794
+shape = SubResource("RectangleShape2D_awt0i")
+
+[connection signal="body_entered" from="WinFlag" to="." method="_on_win_flag"]
+[connection signal="body_exited" from="WinFlag" to="." method="_on_win_flag"]

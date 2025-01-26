@@ -5,22 +5,31 @@ public partial class Main : Node2D
 {
 	[Export]
 	public PackedScene firstScene;
+	
+	private bool _firstTime = true;
 
 	private bool _inScene = false;
 	private Node _loadedScene;
+	private PackedScene _currentScene;
 
 	public void StartGame()
 	{
-        var bubble = GetNode<Bubble>("Bubble");
+		if(_firstTime){
+			_firstTime = false;
+			_currentScene = firstScene;
+		}
 		GetNode<Hud>("HUD").HideTitleScreen();
-		LoadScene(firstScene);
+		LoadScene(_currentScene);
 	}
 	
 	async public void LoadScene(PackedScene Scene){
 		if(_inScene){
 			_loadedScene.QueueFree();
 			await ToSignal(_loadedScene, SignalName.TreeExited);
+			_inScene = false;
 		}
+		
+		_currentScene = Scene;
 			
 		_loadedScene = Scene.Instantiate();
 		_inScene = true;
@@ -50,10 +59,13 @@ public partial class Main : Node2D
 		bubble.Burst();
 	}
 	
-	private void Reset(){
+	async private void Reset(){
 		GetNode<Hud>("HUD").ShowTitleScreen();
-		_loadedScene.QueueFree();
-		_inScene = false;
+		if(_inScene){
+			_loadedScene.QueueFree();
+			await ToSignal(_loadedScene, SignalName.TreeExited);
+			_inScene = false;
+		}
 		var bubble = GetNode<Bubble>("Bubble");
 		bubble.Position = new Vector2(0, 0);
 		bubble.TargetX = 450.0f;

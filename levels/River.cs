@@ -3,6 +3,8 @@ using System;
 
 public partial class River : Node2D, IBaseLevel
 {
+	private bool _oneShotTransition = true;
+	
 	[Export]
 	public PackedScene nextScene;
 	
@@ -17,6 +19,12 @@ public partial class River : Node2D, IBaseLevel
 	public int LimitRight { get; set; } = 1536;
 	public int LimitTop { get; set; } = -3424;
 	public int LimitBottom { get; set; } = 384;
+	
+	public void _on_win_flag(Node2D other){
+		if(_oneShotTransition)
+			_oneShotTransition = false;
+		WinScene();
+	}
 	
 	public void WinScene(){
 		EmitSignal(SignalName.TransitionScene, nextScene);
