@@ -1,12 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://ctsv7aud7onl8"]
+[gd_scene load_steps=21 format=3 uid="uid://ctsv7aud7onl8"]
 
 [ext_resource type="Texture2D" uid="uid://dl5odiku4g3i4" path="res://arts/bg/space/Parallax100.png" id="2_cp5ra"]
 [ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
-[ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://objects/planet.tscn" id="3_y231g"]
+[ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://objects/Planet.tscn" id="3_y231g"]
 [ext_resource type="PackedScene" uid="uid://bcm786vkf042k" path="res://objects/Moon.tscn" id="6_metjv"]
 [ext_resource type="PackedScene" uid="uid://vcjigvd30k2k" path="res://objects/Earth.tscn" id="6_n6djn"]
 [ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="8_fmpvr"]
+[ext_resource type="PackedScene" uid="uid://2ekjt4c2cr48" path="res://objects/RedMoon.tscn" id="8_x2mcm"]
+[ext_resource type="PackedScene" uid="uid://dy5b4qfjx8m0k" path="res://objects/WhiteMoon.tscn" id="9_bkth4"]
+[ext_resource type="PackedScene" uid="uid://bmjr6p6njpbjf" path="res://objects/BubblePlanet.tscn" id="10_bbnfy"]
+[ext_resource type="PackedScene" uid="uid://b5rfsnxev01qn" path="res://objects/PurplePlanet.tscn" id="11_5xus0"]
+[ext_resource type="PackedScene" uid="uid://c525eqvrsiuqf" path="res://objects/Sun.tscn" id="12_4jgm6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2s3n"]
 atlas = ExtResource("8_fmpvr")
@@ -130,10 +135,10 @@ centered = false
 position = Vector2(613, 1195)
 
 [node name="Moon" parent="." instance=ExtResource("6_metjv")]
-position = Vector2(1613, 525)
+position = Vector2(2206, 311)
 
 [node name="Earth" parent="." instance=ExtResource("6_n6djn")]
-position = Vector2(2804, 675)
+position = Vector2(3667, 1786)
 
 [node name="KeyUp" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
 position = Vector2(600, 808)
@@ -146,3 +151,19 @@ position = Vector2(600, 918)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_k5yne")
 metadata/_edit_group_ = true
+
+[node name="RedMoon" parent="." instance=ExtResource("8_x2mcm")]
+position = Vector2(4172, 465)
+
+[node name="WhiteMoon" parent="." instance=ExtResource("9_bkth4")]
+position = Vector2(5982, 1162)
+
+[node name="BubblePlanet" parent="." instance=ExtResource("10_bbnfy")]
+position = Vector2(12757, 1163)
+scale = Vector2(2, 2)
+
+[node name="Planet2" parent="." instance=ExtResource("11_5xus0")]
+position = Vector2(7738, 667)
+
+[node name="Sun" parent="." instance=ExtResource("12_4jgm6")]
+position = Vector2(10457, 39)

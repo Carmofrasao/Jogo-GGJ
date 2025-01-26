@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://2ekjt4c2cr48"]
+
+[ext_resource type="Script" path="res://objects/Planet.cs" id="1_vbo0n"]
+[ext_resource type="Texture2D" uid="uid://csu465ujgngm6" path="res://arts/Space_pixel/RedMoon.png" id="2_si8vd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d8ukr"]
+radius = 44.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqbji"]
+radius = 800.0
+
+[node name="RedMoon" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_vbo0n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(4, 4)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_d8ukr")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(20, 20)
+texture = ExtResource("2_si8vd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tqbji")

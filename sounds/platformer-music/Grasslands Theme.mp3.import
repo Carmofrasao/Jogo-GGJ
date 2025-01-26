@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mf3ne7oj1mwo"
+path="res://.godot/imported/Grasslands Theme.mp3-40fe14a9f80193ab1e14c650eba248bf.mp3str"
+
+[deps]
+
+source_file="res://sounds/platformer-music/Grasslands Theme.mp3"
+dest_files=["res://.godot/imported/Grasslands Theme.mp3-40fe14a9f80193ab1e14c650eba248bf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
