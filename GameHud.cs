@@ -1,0 +1,38 @@
+using Godot;
+using System;
+
+public partial class GameHud : CanvasLayer
+{
+    private const int UPDATE_VALUE_DIV_FACTOR = 100;
+
+    private int _scoreValue = 0;
+    private Label _scoreLabel;
+
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+        this._scoreLabel = GetNode("Top").GetNode("ScoreControl").GetNode<Label>("ScoreLabel");
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+        // Text is updated in format 0000000
+        this._scoreLabel.Text = this._scoreValue.ToString("D7"); 
+	}
+
+    public void Start()
+    {
+        this._scoreValue = 0;
+        this.Show();
+    }
+
+    public void UpdateScore(Vector2 playerVelocity)
+    {
+        // Increase score based on player velocity
+        // The faster the player is moving, the more points they get
+        var addValue = (int)Mathf.Abs(playerVelocity.X) + (int)Mathf.Abs(playerVelocity.Y);
+        addValue /= UPDATE_VALUE_DIV_FACTOR;
+        this._scoreValue += addValue;
+    }
+}

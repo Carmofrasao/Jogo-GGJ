@@ -11,6 +11,7 @@ public partial class Main : Node2D
 
 	public void StartGame()
 	{
+        var bubble = GetNode<Bubble>("Bubble");
 		GetNode<Hud>("HUD").HideTitleScreen();
 		LoadScene(firstScene);
 	}

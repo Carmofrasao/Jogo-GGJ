@@ -4,6 +4,12 @@ using System.Net.Http;
 
 public partial class Bubble : CharacterBody2D
 {
+    private bool _updateScore = false;
+
+    private const int UPDATE_SCORE_INTERVAL_MS = 100;
+
+    private float _updateScoreTimer = 0;
+    
 	[Export]
 	public float TargetX = 0f;
 
@@ -18,6 +24,9 @@ public partial class Bubble : CharacterBody2D
 	[Signal]
 	public delegate void BurstAnimationFinishedEventHandler();
 
+    [Signal]
+    public delegate void UpdateScoreEventHandler(Vector2 playerVelocity);
+
 	public override void _Ready()
 	{
 		Reset();
@@ -25,14 +34,33 @@ public partial class Bubble : CharacterBody2D
 	
 	public void Reset(){
 		Show();
+        this._updateScoreTimer = Time.GetTicksMsec();
+        this.Velocity = new Vector2(0, 0);
 		var _animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
 		_animationPlayer.Play("default");
         _bursting = false;
 	}
 
+    public void Start()
+    {
+        this.GetNode("Camera2D").GetNode("GAMEHUD").Call("Start");
+        this._updateScoreTimer = Time.GetTicksMsec();
+    }
+
     public override void _PhysicsProcess(double delta)
     {
         Vector2 velocity = Velocity;
+        var timer = Time.GetTicksMsec();
+
+        if (timer - this._updateScoreTimer > UPDATE_SCORE_INTERVAL_MS) {
+            this._updateScore = true;
+        }
+        if (_updateScore) {
+            EmitSignal(SignalName.UpdateScore, velocity);
+            this._updateScore = false;
+            this._updateScoreTimer = timer;
+        }
+
         // more = more friction
         velocity.X = (float)Mathf.Lerp(velocity.X, TargetX, 0.9*delta);
         velocity.Y = (float)Mathf.Lerp(velocity.Y, TargetY, 0.9*delta);

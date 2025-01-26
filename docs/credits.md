@@ -6,6 +6,8 @@
 
 https://greatdocbrown.itch.io/gamepad-ui
 
+https://crusenho.itch.io/icons-essential-pack-free-icons
+
 ### Sky Scene
 
 https://craftpix.net/freebies/free-pixel-art-cloud-and-sky-backgrounds/
