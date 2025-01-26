@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cd8a6iu6k7xlr"]
+[gd_scene load_steps=21 format=3 uid="uid://cd8a6iu6k7xlr"]
 
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="1_yp3ml"]
 [ext_resource type="Texture2D" uid="uid://bqqftphax31er" path="res://arts/bg/cloud-and-sky/2.png" id="2_y45se"]
@@ -80,6 +80,11 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a58kp"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g2eom"]
+normal = Vector2(0, 1)
 
 [node name="Sky" type="Node2D"]
 
@@ -169,27 +174,27 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="Attractor1" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3352, 256)
-rotation = -0.507891
+position = Vector2(3384, 680)
+rotation = -2.35619
 Factor = 100.0
 
 [node name="Attractor31" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3352, -48.0001)
+position = Vector2(3328, -264)
 rotation = -0.507891
 Factor = 100.0
 
 [node name="Attractor32" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3760, 80)
+position = Vector2(3560, -392)
 rotation = -0.507891
 Factor = 100.0
 
 [node name="Attractor16" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2456, -272)
+position = Vector2(2552, -296)
 rotation = -0.507891
 Factor = 100.0
 
 [node name="Attractor27" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2496, 15.9999)
+position = Vector2(2432, -232)
 rotation = -0.507891
 Factor = 100.0
 
@@ -198,18 +203,8 @@ position = Vector2(3440, -328)
 rotation = -0.507891
 Factor = 100.0
 
-[node name="Attractor10" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3864, -192)
-rotation = -0.507891
-Factor = 100.0
-
 [node name="Attractor17" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4208, -64.0001)
-rotation = -0.507891
-Factor = 100.0
-
-[node name="Attractor37" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4728, -280)
+position = Vector2(4232, -296)
 rotation = -0.507891
 Factor = 100.0
 
@@ -218,39 +213,174 @@ position = Vector2(4352, -360)
 rotation = -0.507891
 Factor = 100.0
 
+[node name="Attractor45" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4480, -408)
+rotation = -0.507891
+Factor = 100.0
+
 [node name="Attractor35" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4144, 248)
-rotation = -0.785397
+position = Vector2(3872, 376)
+rotation = -1.83259
+Factor = 100.0
+
+[node name="Attractor44" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3840, 248)
+rotation = -1.83259
 Factor = 100.0
 
 [node name="Attractor24" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(5552, 104)
+position = Vector2(5592, 216)
 rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor50" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5704, 160)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor51" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5944, 47.9998)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor52" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5824, 104)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor64" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6960, 1200)
+rotation = -3.40339
+Factor = 100.0
+
+[node name="Attractor65" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7200, 1088)
+rotation = -3.40339
+Factor = 100.0
+
+[node name="Attractor66" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7080, 1144)
+rotation = -3.40339
+Factor = 100.0
+
+[node name="Attractor67" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7576, 1352)
+rotation = -3.40339
+Factor = 100.0
+
+[node name="Attractor68" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7816, 1240)
+rotation = -3.40339
+Factor = 100.0
+
+[node name="Attractor69" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7696, 1296)
+rotation = -3.40339
 Factor = 100.0
 
 [node name="Attractor25" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(6040, 504)
+position = Vector2(6712, -320)
 rotation = -0.507891
 Factor = 100.0
 
+[node name="Attractor53" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6824, -376)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor54" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7064, -488)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor55" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6944, -432)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor56" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6384, 240)
+rotation = -0.785397
+Factor = 100.0
+
+[node name="Attractor57" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6496, 184)
+rotation = -0.785397
+Factor = 100.0
+
+[node name="Attractor58" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6736, 72)
+rotation = -0.785397
+Factor = 100.0
+
+[node name="Attractor59" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6616, 128)
+rotation = -0.785397
+Factor = 100.0
+
+[node name="Attractor70" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7376, 208)
+rotation = 0.261799
+Factor = 100.0
+
+[node name="Attractor71" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7520, 192)
+rotation = 0.261799
+Factor = 100.0
+
+[node name="Attractor72" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7800, 160)
+rotation = 0.261799
+Factor = 100.0
+
+[node name="Attractor73" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(7664, 168)
+rotation = 0.261799
+Factor = 100.0
+
+[node name="Attractor60" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6088, 688)
+rotation = 0.523598
+Factor = 100.0
+
+[node name="Attractor61" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6232, 720)
+rotation = 0.523598
+Factor = 100.0
+
+[node name="Attractor62" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6528, 744)
+rotation = 0.523598
+Factor = 100.0
+
+[node name="Attractor63" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6368, 752)
+rotation = 0.523598
+Factor = 100.0
+
 [node name="Attractor2" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3880, 848)
-rotation = -2.41205
+position = Vector2(4288, 536)
+rotation = -5.49778
 Factor = 100.0
 
 [node name="Attractor34" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3464, 1144)
-rotation = -2.09439
+position = Vector2(3488, 1256)
+rotation = -2.35619
 Factor = 100.0
 
 [node name="Attractor18" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3272, 984)
+position = Vector2(2992, 1168)
 rotation = -2.41205
 Factor = 100.0
 
 [node name="Attractor33" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3640, 784)
-rotation = -2.41205
+position = Vector2(3480, 776)
+rotation = -2.35619
+Factor = 100.0
+
+[node name="Attractor42" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3576, 872)
+rotation = -2.35619
 Factor = 100.0
 
 [node name="Attractor30" parent="." instance=ExtResource("8_34xqh")]
@@ -259,8 +389,13 @@ rotation = -2.41205
 Factor = 100.0
 
 [node name="Attractor19" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3800, 1344)
-rotation = -2.41205
+position = Vector2(3584, 1352)
+rotation = -2.35619
+Factor = 100.0
+
+[node name="Attractor43" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3680, 1448)
+rotation = -2.35619
 Factor = 100.0
 
 [node name="Attractor11" parent="." instance=ExtResource("8_34xqh")]
@@ -269,59 +404,104 @@ rotation = -2.41205
 Factor = 100.0
 
 [node name="Attractor12" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4416, 1272)
+position = Vector2(4432, 1400)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor21" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4536, 1480)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor37" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4336, 1312)
 rotation = -2.41205
 Factor = 100.0
 
 [node name="Attractor36" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4464, 920)
+position = Vector2(4264, 1032)
 rotation = -2.41205
 Factor = 100.0
 
 [node name="Attractor3" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4648, 0)
+position = Vector2(4464, 376)
+rotation = -1.0472
 Factor = 100.0
 
-[node name="Attractor4" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(5156, 322)
+[node name="Attractor10" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4528, 256)
+rotation = -1.0472
 Factor = 100.0
 
 [node name="Attractor20" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4880, 496)
+position = Vector2(4592, 136)
+rotation = -1.0472
+Factor = 100.0
+
+[node name="Attractor74" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(8000, -39.9999)
+rotation = -1.0472
+Factor = 100.0
+
+[node name="Attractor75" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(8064, -160)
+rotation = -1.0472
+Factor = 100.0
+
+[node name="Attractor76" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(8128, -280)
+rotation = -1.0472
+Factor = 100.0
+
+[node name="Attractor4" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5144, 528)
+Factor = 100.0
+
+[node name="Attractor47" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5272, 528)
+Factor = 100.0
+
+[node name="Attractor46" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5008, 528)
 Factor = 100.0
 
 [node name="Attractor5" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(5451, 1343)
+position = Vector2(5320, 1416)
 rotation = -2.19562
 Factor = 100.0
 
 [node name="Attractor22" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(5240, 968)
+position = Vector2(5400, 1528)
 rotation = -2.19562
 Factor = 100.0
 
 [node name="Attractor39" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(5184, 1248)
+position = Vector2(5232, 1304)
 rotation = -2.19562
 Factor = 100.0
 
 [node name="Attractor23" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(5024, 280)
+position = Vector2(5024, 0.000244141)
 rotation = -2.19562
 Factor = 100.0
 
-[node name="Attractor21" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(4736, 1368)
+[node name="Attractor48" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5112, 104)
+rotation = -2.19562
+Factor = 100.0
+
+[node name="Attractor49" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5192, 216)
 rotation = -2.19562
 Factor = 100.0
 
 [node name="Attractor6" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2680, 808)
+position = Vector2(2640, 768)
 rotation = -2.92692
 Factor = 100.0
 
 [node name="Attractor13" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2328, 584)
+position = Vector2(2368, 704)
 rotation = -2.92692
 Factor = 100.0
 
@@ -336,7 +516,7 @@ rotation = -2.92692
 Factor = 100.0
 
 [node name="Attractor7" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2856, 216)
+position = Vector2(2888, 288)
 rotation = -1.83259
 Factor = 100.0
 
@@ -351,7 +531,7 @@ rotation = -1.83259
 Factor = 100.0
 
 [node name="Attractor15" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2048, 48)
+position = Vector2(1872, 48)
 rotation = -1.83259
 Factor = 100.0
 
@@ -361,17 +541,23 @@ rotation = -1.57079
 Factor = 100.0
 
 [node name="Attractor41" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(1152, 56)
+rotation = -1.57079
+Factor = 100.0
+
+[node name="Attractor41" parent="Attractor41" instance=ExtResource("8_34xqh")]
 position = Vector2(1152, 72)
 rotation = -1.57079
 Factor = 100.0
 
 [node name="Attractor8" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2808, -24)
+position = Vector2(2848, 160)
 rotation = -1.83259
 Factor = 100.0
 
 [node name="Bird" parent="." instance=ExtResource("9_5dbyp")]
 position = Vector2(6824, 648)
+metadata/_edit_lock_ = true
 
 [node name="Bird6" parent="." instance=ExtResource("9_5dbyp")]
 position = Vector2(7712, -32)
@@ -380,10 +566,11 @@ position = Vector2(7712, -32)
 position = Vector2(4496, -16)
 
 [node name="Bird4" parent="." instance=ExtResource("9_5dbyp")]
-position = Vector2(5024, 800)
+position = Vector2(5008, 768)
 
 [node name="Bird5" parent="." instance=ExtResource("9_5dbyp")]
 position = Vector2(5936, -128)
+metadata/_edit_lock_ = true
 
 [node name="Bird3" parent="." instance=ExtResource("9_5dbyp")]
 position = Vector2(3360, 912)
@@ -399,6 +586,12 @@ position = Vector2(3232, 1264)
 
 [node name="Drone4" parent="." instance=ExtResource("9_thtuw")]
 position = Vector2(5464, 432)
+
+[node name="Drone9" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(6064, 1456)
+
+[node name="Drone10" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(6064, 1456)
 
 [node name="Drone5" parent="." instance=ExtResource("9_thtuw")]
 position = Vector2(6376, -312)
@@ -423,3 +616,17 @@ position = Vector2(855, -124)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_ercd0")
 metadata/_edit_group_ = true
+
+[node name="BottomBoundary" type="StaticBody2D" parent="."]
+position = Vector2(0, 1624)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBoundary"]
+shape = SubResource("WorldBoundaryShape2D_a58kp")
+
+[node name="UpBoundary" type="StaticBody2D" parent="."]
+position = Vector2(0, -600)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpBoundary"]
+shape = SubResource("WorldBoundaryShape2D_g2eom")
