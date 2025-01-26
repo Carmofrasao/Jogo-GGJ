@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq0rdac56mbii"]
+[gd_scene load_steps=5 format=3 uid="uid://djqnd2o38pi7v"]
 
 [ext_resource type="Script" path="res://objects/Planet.cs" id="1_unotd"]
 [ext_resource type="Texture2D" uid="uid://b0aihk5o5jdfd" path="res://arts/Space_pixel/BluePlanet.png" id="2_56x66"]

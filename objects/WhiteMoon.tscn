@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy5b4qfjx8m0k"]
+[gd_scene load_steps=5 format=3 uid="uid://dqi5e38fvu3t7"]
 
 [ext_resource type="Script" path="res://objects/Planet.cs" id="1_kat28"]
 [ext_resource type="Texture2D" uid="uid://bi8q0fbvmrvul" path="res://arts/Space_pixel/WhiteMoon.png" id="2_503ak"]

@@ -10,9 +10,9 @@ using System;
 
 public partial class AttractorRailLevel : Node2D
 {
-    private PackedScene _PickaxeScene = GD.Load<PackedScene>("res://objects/pickaxe.tscn");
-    private PackedScene _WaterBottleScene = GD.Load<PackedScene>("res://objects/water_bottle.tscn");
-    private PackedScene _ZxtScene = GD.Load<PackedScene>("res://objects/zxt.tscn");
+    private PackedScene _PickaxeScene = GD.Load<PackedScene>("res://objects/Pickaxe.tscn");
+    private PackedScene _WaterBottleScene = GD.Load<PackedScene>("res://objects/WaterBottle.tscn");
+    private PackedScene _ZxtScene = GD.Load<PackedScene>("res://objects/Zxt.tscn");
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()

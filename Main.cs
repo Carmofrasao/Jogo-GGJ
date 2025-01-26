@@ -58,9 +58,8 @@ public partial class Main : Node2D
 		var bubble = GetNode<Bubble>("Bubble");
 		bubble.Burst();
 	}
-	
-	private void Reset(){
-		GetNode<Hud>("HUD").ShowTitleScreen();
+	async private void Reset(){
+		GetNode<Hud>("Hud").ShowTitleScreen();
 		if(_inScene){
 			_loadedScene.Free();
 			_inScene = false;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5rfsnxev01qn"]
+[gd_scene load_steps=5 format=3 uid="uid://cnlpvbxfuobr4"]
 
 [ext_resource type="Script" path="res://objects/Planet.cs" id="1_akr2h"]
 [ext_resource type="Texture2D" uid="uid://d4kfoasn26pfj" path="res://arts/Space_pixel/PurplePlanet.png" id="2_sp7q7"]
