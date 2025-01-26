@@ -1,61 +1,82 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgwg1uyt6fqa5"]
+[gd_scene load_steps=8 format=3 uid="uid://cgwg1uyt6fqa5"]
 
 [ext_resource type="Script" path="res://Bubble.cs" id="1_nejcm"]
-[ext_resource type="Texture2D" uid="uid://dvkbgl55hpfy6" path="res://arts/bubble/bubble-burst-1.png" id="2_yn0xj"]
-[ext_resource type="Texture2D" uid="uid://cxt4j2t6gibas" path="res://arts/bubble/bubble-burst-2.png" id="3_r2xeb"]
-[ext_resource type="Texture2D" uid="uid://i15ys70dl6fg" path="res://arts/bubble/bubble-burst-3.png" id="4_cctds"]
-[ext_resource type="Texture2D" uid="uid://ckjsnocgcxmef" path="res://arts/bubble/bubble-burst-4.png" id="5_jpmro"]
-[ext_resource type="Texture2D" uid="uid://cghwudesfl2hw" path="res://arts/bubble/bubble-3.png" id="6_2xl8k"]
-[ext_resource type="Texture2D" uid="uid://emftmv0imhwm" path="res://arts/bubble/bubble-burst-5.png" id="6_xickp"]
-[ext_resource type="Texture2D" uid="uid://d3cfqy8e64byd" path="res://arts/bubble/bubble-2.png" id="7_nys3m"]
-[ext_resource type="Texture2D" uid="uid://qwnsvk7t4scw" path="res://arts/bubble/bubble-1.png" id="8_1mm7q"]
-[ext_resource type="Texture2D" uid="uid://ddhebpsf18qiw" path="res://arts/bubble/bubble-4.png" id="9_qgqnr"]
+[ext_resource type="Texture2D" uid="uid://2jpapbamh3tk" path="res://arts/bubble/bubble-burst-sprite-sheet.png" id="2_jnqut"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h7d1v"]
 radius = 32.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_d31xh"]
-animations = [{
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("2_yn0xj")
-}, {
-"duration": 2.0,
-"texture": ExtResource("3_r2xeb")
-}, {
-"duration": 2.0,
-"texture": ExtResource("4_cctds")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_jpmro")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_jpmro")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_xickp")
-}],
-"loop": true,
-"name": &"burst",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 20.0,
-"texture": ExtResource("6_2xl8k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_nys3m")
-}, {
-"duration": 9.0,
-"texture": ExtResource("8_1mm7q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_qgqnr")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
+[sub_resource type="Animation" id="Animation_0uvep"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5ammm"]
+resource_name = "burst"
+length = 0.750008
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.75),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_FinishBurst"
 }]
+}
+
+[sub_resource type="Animation" id="Animation_p58di"]
+resource_name = "defalt"
+length = 3.10001
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.1, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hkva6"]
+_data = {
+"RESET": SubResource("Animation_0uvep"),
+"burst": SubResource("Animation_5ammm"),
+"default": SubResource("Animation_p58di")
+}
 
 [node name="Bubble" type="CharacterBody2D"]
 collision_mask = 2
@@ -65,10 +86,13 @@ script = ExtResource("1_nejcm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_h7d1v")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9.53674e-07, 9.53674e-07)
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_d31xh")
-animation = &"burst"
-autoplay = "default"
-frame_progress = 0.475485
+texture = ExtResource("2_jnqut")
+hframes = 5
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hkva6")
+}

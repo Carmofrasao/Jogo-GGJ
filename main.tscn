@@ -26,5 +26,6 @@ autostart = true
 script = ExtResource("5_ewifk")
 
 [connection signal="StartGame" from="HUD" to="." method="StartGame"]
+[connection signal="BurstAnimationFinished" from="Bubble" to="." method="Reset"]
 [connection signal="Hit" from="Bubble" to="." method="GameOver"]
 [connection signal="timeout" from="KeyUpDownAnimationTimer" to="KeyUpDownAnimationTimer" method="OnTimeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3cfqy8e64byd"
-path="res://.godot/imported/bubble-2.png-fe06f0d9cfda0333f39f3a560b775955.ctex"
+uid="uid://2jpapbamh3tk"
+path="res://.godot/imported/bubble-burst-sprite-sheet.png-69b87ca79a87bfc4133605282afbe1b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arts/bubble/bubble-2.png"
-dest_files=["res://.godot/imported/bubble-2.png-fe06f0d9cfda0333f39f3a560b775955.ctex"]
+source_file="res://arts/bubble/bubble-burst-sprite-sheet.png"
+dest_files=["res://.godot/imported/bubble-burst-sprite-sheet.png-69b87ca79a87bfc4133605282afbe1b6.ctex"]
 
 [params]
 
