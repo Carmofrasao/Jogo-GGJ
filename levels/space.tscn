@@ -1,5 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://ctsv7aud7onl8"]
 
+[ext_resource type="Script" path="res://levels/Space.cs" id="1_ck8ta"]
 [ext_resource type="Texture2D" uid="uid://dl5odiku4g3i4" path="res://arts/bg/space/Parallax100.png" id="2_cp5ra"]
 [ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
@@ -86,14 +87,7 @@ animations = [{
 }]
 
 [node name="Space" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("3_ttrsp")]
-position = Vector2(-482, 707)
-TargetX = 200.0
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(305, -30)
-zoom = Vector2(0.5, 0.5)
+script = ExtResource("1_ck8ta")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

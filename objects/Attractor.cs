@@ -34,6 +34,7 @@ public partial class Attractor : Area2D
         {
             Polygon = new Vector2[] { new(0, 0), new(4, 0), new(4, 120), new(0, 120) },
             Position = windLocation,
+            Color = new Color(1.0f, 1.0f, 1.0f, (float)GD.RandRange(0.3, 0.7)),
         };
         _winds.Add(polygon);
         AddChild(polygon);

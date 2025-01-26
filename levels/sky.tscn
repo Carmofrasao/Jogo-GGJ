@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://cd8a6iu6k7xlr"]
+[gd_scene load_steps=22 format=3 uid="uid://cd8a6iu6k7xlr"]
 
+[ext_resource type="Script" path="res://levels/Sky.cs" id="1_i4wvf"]
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="1_yp3ml"]
 [ext_resource type="Texture2D" uid="uid://bqqftphax31er" path="res://arts/bg/cloud-and-sky/2.png" id="2_y45se"]
 [ext_resource type="Texture2D" uid="uid://dwvo48y4lm65l" path="res://arts/bg/cloud-and-sky/3.png" id="3_iktsl"]
@@ -87,6 +88,7 @@ animations = [{
 normal = Vector2(0, 1)
 
 [node name="Sky" type="Node2D"]
+script = ExtResource("1_i4wvf")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

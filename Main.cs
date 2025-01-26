@@ -11,10 +11,18 @@ public partial class Main : Node2D
 	public void StartGame()
 	{
 		GetNode<Hud>("HUD").HideTitleScreen();
-		GetNode<Bubble>("Bubble").Position = new Vector2(0, 0);
-		GetNode<Bubble>("Bubble").TargetX = 450.0f;
-		GetNode<Bubble>("Bubble").Reset();
 		_loadedScene = firstScene.Instantiate();
+        IBaseLevel level = (IBaseLevel)_loadedScene;
+        var bubble = GetNode<Bubble>("Bubble");
+        var camera = bubble.GetNode<Camera2D>("Camera2D");
+		bubble.Position = new Vector2(0, 0);
+		bubble.TargetX = level.TargetX;
+		bubble.TargetY = level.TargetY;
+		bubble.Reset();
+		camera.LimitBottom = level.LimitBottom;
+		camera.LimitTop = level.LimitTop;
+		camera.LimitLeft = level.LimitLeft;
+		camera.LimitRight = level.LimitRight;
 		AddChild(_loadedScene);
 	}
 

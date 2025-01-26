@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://bghrd3ht05i7w"]
 
-[ext_resource type="PackedScene" uid="uid://cd8a6iu6k7xlr" path="res://levels/sky.tscn" id="1_eakrw"]
 [ext_resource type="Script" path="res://Main.cs" id="1_mujac"]
 [ext_resource type="PackedScene" uid="uid://dyr8vvt3it5s4" path="res://hud.tscn" id="1_psyw5"]
+[ext_resource type="PackedScene" uid="uid://bffapesbn65jb" path="res://levels/river.tscn" id="2_7vn4r"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_56lgj"]
 [ext_resource type="Script" path="res://KeyUpDownAnimationTimer.cs" id="5_ewifk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mujac")
-firstScene = ExtResource("1_eakrw")
+firstScene = ExtResource("2_7vn4r")
 
 [node name="HUD" parent="." instance=ExtResource("1_psyw5")]
 
@@ -17,8 +17,6 @@ metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Bubble"]
 zoom = Vector2(0.75, 0.75)
-limit_top = -572
-limit_bottom = 1600
 
 [node name="KeyUpDownAnimationTimer" type="Timer" parent="."]
 wait_time = 0.25

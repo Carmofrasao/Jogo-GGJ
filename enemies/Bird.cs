@@ -27,7 +27,7 @@ public partial class Bird : CharacterBody2D
 		switch (_state)
 		{
 			case BirdState.IDLE:
-				Velocity = new Vector2(x: -50, y: 0);
+				Velocity = new Vector2(x: -200, y: 0);
 				foreach (var body in GetNode<Area2D>("Area2D").GetOverlappingBodies())
 				{
 					if (body is Bubble bubble)
@@ -71,7 +71,6 @@ public partial class Bird : CharacterBody2D
 		}
 		MoveAndCollide(Velocity * (float)delta);
 	}
-
 
 	private void Play(string animationName)
 	{
