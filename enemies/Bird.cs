@@ -16,7 +16,7 @@ public partial class Bird : CharacterBody2D
 
     private float _ready_to_attack_start_time = 0.0f;
 
-    private Bubble _ready_to_attack_bubble;
+    private Vector2 _ready_to_attack_point;
 
     public override void _Process(double delta)
     {
@@ -29,24 +29,24 @@ public partial class Bird : CharacterBody2D
                     if (body is Bubble bubble)
                     {
                         BecomeReadyToAttack();
-                        _ready_to_attack_bubble = bubble;
+                        _ready_to_attack_point = bubble.GlobalPosition;
                         break;
                     }
                 }
                 break;
             case BirdState.READY_TO_ATTACK:
                 Velocity = new Vector2(x: 0, y: 0);
-                if (!GetNode<Area2D>("Area2D").GetOverlappingBodies().Contains(_ready_to_attack_bubble))
-                {
-                    ReturnToIdle();
-                }
-                else if (Time.GetTicksMsec() - _ready_to_attack_start_time >= DETECTION_THRESHOLD_TIME_MS)
+                if (Time.GetTicksMsec() - _ready_to_attack_start_time >= DETECTION_THRESHOLD_TIME_MS)
                 {
                     StartAttacking();
                 }
                 break;
             case BirdState.ATTACKING:
-                Velocity = (_ready_to_attack_bubble.GlobalPosition - GlobalPosition).Normalized() * 1000.0f;
+                Velocity = (_ready_to_attack_point - GlobalPosition).Normalized() * 1000.0f;
+                if (Time.GetTicksMsec() - _ready_to_attack_start_time >= DETECTION_THRESHOLD_TIME_MS*2)
+                {
+                    ReturnToIdle();
+                }
                 break;
         }
         MoveAndCollide(Velocity * (float)delta);

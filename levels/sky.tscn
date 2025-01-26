@@ -371,10 +371,46 @@ rotation = -1.83259
 Factor = 100.0
 
 [node name="Bird" parent="." instance=ExtResource("9_5dbyp")]
-position = Vector2(6720, 472)
+position = Vector2(6824, 648)
+
+[node name="Bird6" parent="." instance=ExtResource("9_5dbyp")]
+position = Vector2(7712, -32)
+
+[node name="Bird2" parent="." instance=ExtResource("9_5dbyp")]
+position = Vector2(4496, -16)
+
+[node name="Bird4" parent="." instance=ExtResource("9_5dbyp")]
+position = Vector2(5024, 800)
+
+[node name="Bird5" parent="." instance=ExtResource("9_5dbyp")]
+position = Vector2(5936, -128)
+
+[node name="Bird3" parent="." instance=ExtResource("9_5dbyp")]
+position = Vector2(3360, 912)
 
 [node name="Drone" parent="." instance=ExtResource("9_thtuw")]
 position = Vector2(2424, -432)
+
+[node name="Drone2" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(4064, -416)
+
+[node name="Drone3" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(3232, 1264)
+
+[node name="Drone4" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(5464, 432)
+
+[node name="Drone5" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(6376, -312)
+
+[node name="Drone6" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(7008, 1352)
+
+[node name="Drone7" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(5704, -432)
+
+[node name="Drone8" parent="." instance=ExtResource("9_thtuw")]
+position = Vector2(7824, -392)
 
 [node name="KeyLeft" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
 position = Vector2(744, -128)
