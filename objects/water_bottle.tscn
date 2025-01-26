@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca3smv2txtqv5"]
+
+[ext_resource type="Script" path="res://objects/WaterBottle.cs" id="1_ndtws"]
+[ext_resource type="Texture2D" uid="uid://bg346kuacjuw0" path="res://arts/objects/waterBottle.png" id="1_pxpu1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ish5"]
+radius = 6.0
+height = 20.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_685gp"]
+size = Vector2(18, 47)
+
+[node name="WaterBottle" type="RigidBody2D"]
+script = ExtResource("1_ndtws")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pxpu1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -20)
+shape = SubResource("CapsuleShape2D_7ish5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1, 6.5)
+shape = SubResource("RectangleShape2D_685gp")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="OnVisibleOnScreenNotifier2DScreenExited"]

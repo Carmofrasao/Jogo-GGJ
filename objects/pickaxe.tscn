@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dohpowmlbntgt"]
+
+[ext_resource type="Script" path="res://objects/Pickaxe.cs" id="1_dl7tt"]
+[ext_resource type="Texture2D" uid="uid://b6xig0ue417i" path="res://arts/objects/pickaxe.png" id="1_wbytm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wppc"]
+size = Vector2(2.70898, 17.8678)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl6cr"]
+size = Vector2(4.3659, 1.8287)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7ncx"]
+size = Vector2(5.47254, 15.1916)
+
+[node name="Pickaxe" type="RigidBody2D"]
+script = ExtResource("1_dl7tt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wbytm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.60365, 4.05043)
+rotation = 0.722566
+scale = Vector2(2.32818, -3.53453)
+shape = SubResource("RectangleShape2D_0wppc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(21.4568, -3.14589)
+rotation = -0.577704
+scale = Vector2(1.47383, -15.9521)
+shape = SubResource("RectangleShape2D_sl6cr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(0, -23)
+rotation = 2.1199
+scale = Vector2(1.41562, -1.9767)
+shape = SubResource("RectangleShape2D_u7ncx")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="OnVisibleOnScreenNotifier2DScreenExited"]
