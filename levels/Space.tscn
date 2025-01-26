@@ -203,21 +203,17 @@ metadata/_edit_use_anchors_ = true
 [node name="Satellite" parent="." instance=ExtResource("13_lxbsv")]
 position = Vector2(3871, -23)
 scale = Vector2(1.5, 1.5)
-collision_layer = 2
 
 [node name="Satellite2" parent="." instance=ExtResource("13_lxbsv")]
 position = Vector2(6474, 361)
-collision_layer = 2
 
 [node name="UFO" parent="." instance=ExtResource("14_472c1")]
 position = Vector2(9557, 448)
 scale = Vector2(20, 20)
-collision_layer = 2
 
 [node name="UFO2" parent="." instance=ExtResource("14_472c1")]
 position = Vector2(11003, 847)
 scale = Vector2(40, 40)
-collision_layer = 2
 
 [node name="UpBoundary" type="StaticBody2D" parent="."]
 position = Vector2(0, -2112)

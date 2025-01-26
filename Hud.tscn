@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8y27cgepojw7"]
+[gd_scene load_steps=4 format=3 uid="uid://dyr8vvt3it5s4"]
 
 [ext_resource type="Texture2D" uid="uid://duac1b65ly828" path="res://arts/bg/hud_bg/HUD_background.jpg" id="1_brks5"]
 [ext_resource type="Script" path="res://Hud.cs" id="1_gt5m2"]

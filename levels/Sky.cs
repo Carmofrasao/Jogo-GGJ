@@ -27,6 +27,7 @@ public partial class Sky : Node2D, IBaseLevel
 	
 	public void WinScene(){
 		EmitSignal(SignalName.TransitionScene, nextScene);
+	}
 
 	public float Factor { get; set; } = 15.0f;
 
