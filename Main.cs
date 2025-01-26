@@ -18,7 +18,7 @@ public partial class Main : Node2D
 			_firstTime = false;
 			_currentScene = firstScene;
 		}
-		GetNode<Hud>("HUD").HideTitleScreen();
+		GetNode<Hud>("Hud").HideTitleScreen();
 		LoadScene(_currentScene);
 	}
 	

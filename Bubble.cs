@@ -33,6 +33,8 @@ public partial class Bubble : CharacterBody2D
 
 	public override void _Ready()
 	{
+        if (this.GetNode("Camera2D") == null)
+            return;
         this._gameHud = this.GetNode("Camera2D").GetNode<CanvasLayer>("GAMEHUD");
 		Reset();
 	}

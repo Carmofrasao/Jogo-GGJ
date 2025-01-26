@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dyr8vvt3it5s4" path="res://Hud.tscn" id="3_ijcrf"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://Bubble.tscn" id="4_bvjol"]
 [ext_resource type="Script" path="res://KeyUpDownAnimationTimer.cs" id="5_a36vo"]
-[ext_resource type="PackedScene" path="res://game-hud.tscn" id="6_hgu4u"]
+[ext_resource type="PackedScene" uid="uid://cu7pftnjoe4jf" path="res://game-hud.tscn" id="6_hgu4u"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_gj6wp")

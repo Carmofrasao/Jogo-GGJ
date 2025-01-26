@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cd8a6iu6k7xlr"]
+[gd_scene load_steps=28 format=3 uid="uid://cd8a6iu6k7xlr"]
 
 [ext_resource type="Script" path="res://levels/Sky.cs" id="1_l7l84"]
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="2_p6js8"]
@@ -91,6 +91,9 @@ animations = [{
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g2eom"]
 normal = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1a6my"]
+size = Vector2(166.705, 2330.61)
 
 [node name="Sky" type="Node2D"]
 script = ExtResource("1_l7l84")
@@ -669,3 +672,13 @@ stream = ExtResource("15_u4v2f")
 [node name="Wind" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_omjfj")
 autoplay = true
+
+[node name="WinFlag" type="Area2D" parent="."]
+visibility_layer = 0
+position = Vector2(1028, 557)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinFlag"]
+position = Vector2(54.9397, 78.6849)
+rotation = 1.56794
+shape = SubResource("RectangleShape2D_1a6my")
