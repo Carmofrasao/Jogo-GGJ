@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://db56xcs1va8hn" path="res://arts/bg/river/Attack.png" id="1_sm3cd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_563dq"]
-radius = 50.0
-height = 175.0
+radius = 112.0
+height = 472.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kl0at"]
 atlas = ExtResource("1_sm3cd")
@@ -58,9 +58,11 @@ animations = [{
 }]
 
 [node name="Shark" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_1uosg")
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(-20, 8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_563dq")
 one_way_collision_margin = 0.0
@@ -69,9 +71,11 @@ one_way_collision_margin = 0.0
 scale = Vector2(1, 2.74798)
 
 [node name="DetectionBox" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(0, -20, 0, 20, -1000, 150, -1000, -150)
+polygon = PackedVector2Array(0, -20, 0, 20, 960, 139.739, 960, -139.739)
 
 [node name="SharkAnimation" type="AnimatedSprite2D" parent="."]
-position = Vector2(-148, -386)
+position = Vector2(0, 8)
 scale = Vector2(10.4271, 10.4271)
 sprite_frames = SubResource("SpriteFrames_i17lu")
+autoplay = "default"
+frame_progress = 0.511323
