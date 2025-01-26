@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmjr6p6njpbjf"]
+
+[ext_resource type="Script" path="res://objects/Planet.cs" id="1_f7gf3"]
+[ext_resource type="Texture2D" uid="uid://dkuvfd8wlypl3" path="res://arts/bubble-water.png" id="2_qfaka"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d8ukr"]
+radius = 44.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqbji"]
+radius = 800.0
+
+[node name="BubblePlanet" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_f7gf3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(4, 4)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_d8ukr")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(20, 20)
+texture = ExtResource("2_qfaka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tqbji")

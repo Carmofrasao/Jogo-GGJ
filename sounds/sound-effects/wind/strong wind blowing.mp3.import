@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://u8m01uljtdkl"
+path="res://.godot/imported/strong wind blowing.mp3-693e6188b5a5f26f701d9f69ee3e0161.mp3str"
+
+[deps]
+
+source_file="res://sounds/sound-effects/wind/strong wind blowing.mp3"
+dest_files=["res://.godot/imported/strong wind blowing.mp3-693e6188b5a5f26f701d9f69ee3e0161.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

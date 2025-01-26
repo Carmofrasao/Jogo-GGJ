@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cssnwoe0kioqo"
+path="res://.godot/imported/Worldmap Theme.mp3-6f9ceb8a5b777aae43c9f88ca36f277f.mp3str"
+
+[deps]
+
+source_file="res://sounds/platformer-music/Worldmap Theme.mp3"
+dest_files=["res://.godot/imported/Worldmap Theme.mp3-6f9ceb8a5b777aae43c9f88ca36f277f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
