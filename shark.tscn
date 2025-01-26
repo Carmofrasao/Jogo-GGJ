@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxyy134d3t031"]
+
+[ext_resource type="Script" path="res://Shark.cs" id="1_1uosg"]
+[ext_resource type="Texture2D" uid="uid://db56xcs1va8hn" path="res://arts/bg/river/Attack.png" id="1_sm3cd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_563dq"]
+radius = 50.0
+height = 175.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl0at"]
+atlas = ExtResource("1_sm3cd")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w6ts"]
+atlas = ExtResource("1_sm3cd")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr4n4"]
+atlas = ExtResource("1_sm3cd")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xh03"]
+atlas = ExtResource("1_sm3cd")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf268"]
+atlas = ExtResource("1_sm3cd")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pir5u"]
+atlas = ExtResource("1_sm3cd")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i17lu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kl0at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w6ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr4n4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xh03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf268")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pir5u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Shark" type="CharacterBody2D"]
+script = ExtResource("1_1uosg")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_563dq")
+one_way_collision_margin = 0.0
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 2.74798)
+
+[node name="DetectionBox" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(0, -20, 0, 20, -1000, 150, -1000, -150)
+
+[node name="SharkAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(-148, -386)
+scale = Vector2(10.4271, 10.4271)
+sprite_frames = SubResource("SpriteFrames_i17lu")
