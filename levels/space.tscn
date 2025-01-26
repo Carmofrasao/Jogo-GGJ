@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ctsv7aud7onl8"]
 
-[ext_resource type="Texture2D" uid="uid://c82f8s3o5cxgx" path="res://arts/bg/space/parallax-space-backgound.png" id="1_pg2ih"]
+[ext_resource type="Texture2D" uid="uid://dl5odiku4g3i4" path="res://arts/bg/space/Parallax100.png" id="2_cp5ra"]
 [ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
 [ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://objects/planet.tscn" id="3_y231g"]
@@ -40,7 +40,7 @@ modulate = Color(0.243137, 0.388235, 0.505882, 1)
 texture_filter = 2
 texture_repeat = 2
 scale = Vector2(18.3891, 18.3891)
-texture = ExtResource("1_pg2ih")
+texture = ExtResource("2_cp5ra")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]

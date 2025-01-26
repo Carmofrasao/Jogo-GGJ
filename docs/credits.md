@@ -20,6 +20,8 @@ https://opengameart.org/content/stars-parallax-backgrounds
 
 https://opengameart.org/content/space-pixel-art
 
+https://opengameart.org/content/space-parallax-background
+
 ## Water Scene
 
 https://craftpix.net/freebies/free-underwater-enemies-pixel-art-character-pack/?num=1&count=43&sq=fish&pos=9
