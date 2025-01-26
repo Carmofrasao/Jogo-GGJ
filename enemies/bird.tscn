@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://ncfbd6wcxa0y"]
 
 [ext_resource type="Texture2D" uid="uid://bl0xrymbew3nf" path="res://arts/BirdSpriteBig.png" id="1_20m01"]
-[ext_resource type="Script" path="res://Bird.cs" id="1_v7w4r"]
+[ext_resource type="Script" path="res://enemies/Bird.cs" id="1_v7w4r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eoidn"]
 radius = 50.0

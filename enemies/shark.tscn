@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxyy134d3t031"]
+[gd_scene load_steps=11 format=3 uid="uid://cm7rr5e46vq6q"]
 
-[ext_resource type="Script" path="res://Shark.cs" id="1_1uosg"]
+[ext_resource type="Script" path="res://enemies/Shark.cs" id="1_1uosg"]
 [ext_resource type="Texture2D" uid="uid://db56xcs1va8hn" path="res://arts/bg/river/Attack.png" id="1_sm3cd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_563dq"]

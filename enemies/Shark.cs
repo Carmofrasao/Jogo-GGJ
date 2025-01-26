@@ -3,12 +3,11 @@ using System;
 
 public partial class Shark : CharacterBody2D
 {
-	[Export] public const float MinSpeed = 300.0f;
-	[Export] public const float MaxSpeed = 300.0f;
-	// public const float JumpVelocity = -400.0f;
+	[Export] public float MinSpeed = 300.0f;
+	[Export] public float MaxSpeed = 300.0f;
 	
-	[Export] public const float MinX = 320.0f;
-	[Export] public const float MaxX = 640.0f;
+	[Export] public float MinX = 320.0f;
+	[Export] public float MaxX = 640.0f;
 	
 	enum SharkDirection {
 		LEFT,

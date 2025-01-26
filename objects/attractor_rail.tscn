@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://AttractorRailLevel.cs" id="1_ikco5"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="2_tssp8"]
-[ext_resource type="Script" path="res://AttractorController.cs" id="3_cjcbw"]
-[ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://attractor.tscn" id="4_nq2vi"]
+[ext_resource type="Script" path="res://objects/AttractorController.cs" id="3_cjcbw"]
+[ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://objects/attractor.tscn" id="4_nq2vi"]
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="5_i5sjk"]
 [ext_resource type="Texture2D" uid="uid://bqqftphax31er" path="res://arts/bg/cloud-and-sky/2.png" id="6_qeurd"]
 [ext_resource type="Texture2D" uid="uid://dwvo48y4lm65l" path="res://arts/bg/cloud-and-sky/3.png" id="7_tmj54"]

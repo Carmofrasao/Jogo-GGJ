@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c82f8s3o5cxgx" path="res://arts/bg/space/parallax-space-backgound.png" id="1_pg2ih"]
 [ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
-[ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://planet.tscn" id="3_y231g"]
+[ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://objects/planet.tscn" id="3_y231g"]
 [ext_resource type="Texture2D" uid="uid://iqxjddew2e8w" path="res://arts/bg/space/parallax-space-ring-planet.png" id="5_f6bhy"]
 [ext_resource type="Script" path="res://KeyUpDownAnimationTimer.cs" id="6_cii43"]
 
