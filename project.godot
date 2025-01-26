@@ -14,7 +14,7 @@ config/name="Jogo-GGJ"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 boot_splash/image="res://arts/icon.svg"
-config/icon="res://icon.svg"
+; config/icon="res://icon.svg"
 
 [display]
 
