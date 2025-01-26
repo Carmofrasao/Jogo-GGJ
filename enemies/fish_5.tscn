@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cd1y38jrcuyw6"]
+[gd_scene load_steps=11 format=3 uid="uid://ynkasp17j8ej"]
 
 [ext_resource type="Script" path="res://enemies/Fish.cs" id="1_04hps"]
 [ext_resource type="Texture2D" uid="uid://bhbdmemth8cb5" path="res://arts/bg/river/fishs.png" id="1_ju2w5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_563dq"]
-radius = 112.0
-height = 472.0
+radius = 51.0
+height = 154.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvi1j"]
 atlas = ExtResource("1_ju2w5")
@@ -68,7 +68,7 @@ motion_mode = 1
 script = ExtResource("1_04hps")
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
-position = Vector2(-20, 8)
+position = Vector2(0, 4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_563dq")
 one_way_collision_margin = 0.0
