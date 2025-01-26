@@ -50,7 +50,7 @@ public partial class Main : Node2D
 	}
 	
 	private void Reset(){
-		//GetNode<Hud>("HUD").ShowTitleScreen();
+		GetNode<Hud>("HUD").ShowTitleScreen();
 		_loadedScene.QueueFree();
 		_inScene = false;
 		var bubble = GetNode<Bubble>("Bubble");
