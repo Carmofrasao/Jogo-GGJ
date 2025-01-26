@@ -1,0 +1,132 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbmrjf7jafr0l"]
+
+[ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="1_cw6dk"]
+[ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://objects/attractor.tscn" id="2_a87kc"]
+
+[node name="LevelTransitionLeft" type="Node2D"]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Bubble" parent="." instance=ExtResource("1_cw6dk")]
+
+[node name="Camera2D" type="Camera2D" parent="Bubble"]
+
+[node name="Attractor" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-640, -264)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor2" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-232, -264)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor3" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(176, -264)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor4" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(584, -264)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor5" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-640, -136)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor6" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-232, -136)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor7" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(176, -136)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor8" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(584, -136)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor9" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-640, -8)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor10" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-232, -8)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor11" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(176, -8)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor12" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(584, -8)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor13" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-640, 120)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor14" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-232, 120)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor15" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(176, 120)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor16" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(584, 120)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor17" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-640, 248)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor18" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-232, 248)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor19" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(176, 248)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor20" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(584, 248)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor21" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-640, 376)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor22" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(-232, 376)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor23" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(176, 376)
+rotation = -1.5708
+Factor = 5.0
+
+[node name="Attractor24" parent="Bubble" instance=ExtResource("2_a87kc")]
+position = Vector2(584, 376)
+rotation = -1.5708
+Factor = 5.0
