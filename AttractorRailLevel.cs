@@ -53,7 +53,7 @@ public partial class AttractorRailLevel : Node2D
 
 		var objSpawnLocation = GetNode<PathFollow2D>("Player/ObjectSpawnPath/ObjectSpawnLocation");
 		
-		//objSpawnLocation.ProgressRatio = GD.Randf();
+		objSpawnLocation.ProgressRatio = GD.Randf();
 
 		float direction = objSpawnLocation.Rotation + Mathf.Pi / 2;
 		obj.Position = objSpawnLocation.Position;

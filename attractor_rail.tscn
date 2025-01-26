@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://AttractorRailLevel.cs" id="1_ikco5"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="2_tssp8"]
-[ext_resource type="Script" path="res://PathFollow2d.cs" id="3_cjcbw"]
+[ext_resource type="Script" path="res://AttractorController.cs" id="3_cjcbw"]
 [ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://attractor.tscn" id="4_nq2vi"]
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="5_i5sjk"]
 [ext_resource type="Texture2D" uid="uid://bqqftphax31er" path="res://arts/bg/cloud-and-sky/2.png" id="6_qeurd"]
@@ -14,9 +14,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_vv0x4"]
 _data = {
-"points": PackedVector2Array(-57.6608, -216.01, 60, 215, 10, 314, -60, 215, 50.1693, -235.488, 710, 314, 0, 0, 0, 0, 560, 184)
+"points": PackedVector2Array(-57.6608, -216.01, 60, 215, 10, 314, -60, 215, 0, 0, 710, 314)
 }
-point_count = 3
+point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_o53wg"]
 _data = {
@@ -61,6 +61,7 @@ rotation = 3.14159
 progress = 464.4
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-443, -794)
