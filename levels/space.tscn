@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
 [ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://objects/planet.tscn" id="3_y231g"]
 [ext_resource type="Script" path="res://KeyUpDownAnimationTimer.cs" id="6_cii43"]
-[ext_resource type="PackedScene" uid="uid://ksbvo05kne4w" path="res://objects/Moon.tscn" id="6_metjv"]
-[ext_resource type="PackedScene" uid="uid://bc14rggx7cguo" path="res://objects/Earth.tscn" id="6_n6djn"]
+[ext_resource type="PackedScene" path="res://objects/Moon.tscn" id="6_metjv"]
+[ext_resource type="PackedScene" uid="uid://vcjigvd30k2k" path="res://objects/Earth.tscn" id="6_n6djn"]
 
 [node name="Node2D" type="Node2D"]
 
