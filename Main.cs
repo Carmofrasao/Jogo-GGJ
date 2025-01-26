@@ -36,5 +36,9 @@ public partial class Main : Node2D
 	private void Reset(){
 		GetNode<Hud>("HUD").ShowTitleScreen();
 		_loadedScene.QueueFree();
+        var bubble = GetNode<Bubble>("Bubble");
+        bubble.Position = new Vector2(0, 0);
+        bubble.TargetX = 450.0f;
+        bubble.Velocity = new Vector2(0, 0);
 	}
 }
