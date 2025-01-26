@@ -40,13 +40,15 @@ public partial class Sky : Node2D, IBaseLevel
 		if (Input.IsActionPressed("ui_left"))
 		{
 			Factor = (float)Mathf.Clamp(Factor - 100 * delta, -50, 50);
+			ButtonPressed = true;
 		}
 		if (Input.IsActionPressed("ui_right"))
 		{
 			Factor = (float)Mathf.Clamp(Factor + 100 * delta, -50, 50);
+			ButtonPressed = true;
 		}
 
-        if ((Factor == 15 || Factor == -15) && ButtonPressed) {
+        if ((Factor == 50 || Factor == -50) && ButtonPressed) {
             GetNode<AudioStreamPlayer>("Nope").Play();
         }
         if (PreviousFactor != Factor) {
