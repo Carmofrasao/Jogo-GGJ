@@ -44,7 +44,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_57s5l")
 }],
 "loop": true,
-"name": &"default",
+"name": &"left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -58,11 +58,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_xdgn4")
 }],
 "loop": true,
-"name": &"rigth",
+"name": &"right",
 "speed": 5.0
 }]
 
 [node name="Fish1" type="CharacterBody2D"]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_4ur6b")
 
@@ -81,4 +82,4 @@ polygon = PackedVector2Array(0, -20, 0, 20, 960, 139.739, 960, -139.739)
 [node name="FishAnimation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tcq2n")
-animation = &"rigth"
+animation = &"left"

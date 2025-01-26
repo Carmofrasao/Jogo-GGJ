@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Fish : CharacterBody2D
+public partial class Fish2 : CharacterBody2D
 {
 	[Export]
 	public float MinSpeed = 150.0f;
@@ -85,15 +85,9 @@ public partial class Fish : CharacterBody2D
 	private void Play(string animationName, FishDirection direction)
 	{
 		var animPlayer = GetNode<AnimatedSprite2D>("FishAnimation");
-		if (direction == FishDirection.RIGHT) {
-			animPlayer.Play("right");
-		} else if (direction == FishDirection.LEFT) {
-			animPlayer.Play("left");
-		} else {
-			animPlayer.Play(animationName);
-		}
-		animPlayer.FlipH = false;
+		animPlayer.Play(animationName);
+		//animPlayer.FlipH = false;
 		animPlayer.FlipV = false;
-		//animPlayer.FlipH = direction == FishDirection.LEFT;
+		animPlayer.FlipH = direction == FishDirection.LEFT;
 	}
 }

@@ -43,15 +43,15 @@ public partial class Shark : CharacterBody2D
 	public override void _Ready()
 	{
 		_currentSpeed = MinSpeed;
+		Play("default", _direction);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		bool increaseSpeed = false;
-		float increaseFactor = 0.0f;
+		float increaseFactor;
 		increaseSpeed = false;
-		
 		
 		switch (_state)
 		{
@@ -82,17 +82,9 @@ public partial class Shark : CharacterBody2D
 			_increaseFactor -= 0.2f;
 		} 
 		
-		if (_increaseFactor > 1.0f)
-			_increaseFactor = 1.0f;
-		if (_increaseFactor < 0.0f)
-			_increaseFactor = 0.0f;
+		_increaseFactor = Math.Clamp(_increaseFactor, 0.0f, 1.0f);
 		
-		_currentSpeed = MinSpeed + (MaxSpeed - MinSpeed) * _increaseFactor;
-		
-		if (_currentSpeed > MaxSpeed)
-			_currentSpeed = MaxSpeed;
-		if (_currentSpeed < MinSpeed)
-			_currentSpeed = MinSpeed;
+		_currentSpeed = Math.Clamp(MinSpeed + (MaxSpeed - MinSpeed) * _increaseFactor, MinSpeed, MaxSpeed);
 		
 		if (GlobalPosition.X > MaxX)
 		{

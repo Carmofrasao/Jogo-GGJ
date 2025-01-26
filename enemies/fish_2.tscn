@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://c3ameldere6ru"]
 
 [ext_resource type="Texture2D" uid="uid://chrudf4qlbol7" path="res://arts/bg/river/FAttack.png" id="1_8ctb6"]
-[ext_resource type="Script" path="res://enemies/Fish.cs" id="1_pomxf"]
+[ext_resource type="Script" path="res://enemies/Fish2.cs" id="1_tuydv"]
 [ext_resource type="Texture2D" uid="uid://11ibf1wquxnu" path="res://arts/bg/river/Walk.png" id="2_f50pr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_563dq"]
@@ -92,8 +92,9 @@ animations = [{
 }]
 
 [node name="Fish2" type="CharacterBody2D"]
+collision_layer = 2
 motion_mode = 1
-script = ExtResource("1_pomxf")
+script = ExtResource("1_tuydv")
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 position = Vector2(-20, 8)
@@ -110,4 +111,3 @@ polygon = PackedVector2Array(0, -20, 0, 20, 960, 139.739, 960, -139.739)
 [node name="FishAnimation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4.4375, 4.4375)
 sprite_frames = SubResource("SpriteFrames_xl6go")
-animation = &"attak"
