@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://cshoivk8bmdyj"]
+
+[ext_resource type="Texture2D" uid="uid://b4teb8qrbhfw7" path="res://arts/clouds-and-wind/drone.png" id="1_lgnbl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvkbf"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6gx0"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71d8m"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epc65"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7r5a"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swme8"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wbll"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4qdo"]
+atlas = ExtResource("1_lgnbl")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_30x03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvkbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6gx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71d8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epc65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7r5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swme8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wbll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4qdo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w1xop"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8os44"]
+radius = 4.94846
+height = 39.5876
+
+[node name="Drone" type="StaticBody2D"]
+scale = Vector2(8.08333, 8.08333)
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_30x03")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_w1xop")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8os44")
