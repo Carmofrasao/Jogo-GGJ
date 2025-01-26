@@ -13,6 +13,7 @@ public partial class Main : Node2D
 		GetNode<Hud>("HUD").HideTitleScreen();
 		GetNode<Bubble>("Bubble").Position = new Vector2(0, 0);
 		GetNode<Bubble>("Bubble").TargetX = 100.0f;
+		GetNode<Bubble>("Bubble").Reset();
 		_loadedScene = firstScene.Instantiate();
 		AddChild(_loadedScene);
 	}

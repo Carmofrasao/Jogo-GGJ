@@ -18,6 +18,11 @@ public partial class Bubble : CharacterBody2D
 
 	public override void _Ready()
 	{
+		Reset();
+	}
+	
+	public void Reset(){
+		Show();
 		var _animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
 		_animationPlayer.Play("default");
 	}
