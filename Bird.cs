@@ -5,7 +5,8 @@ public partial class Bird : CharacterBody2D
 {
     const int DETECTION_THRESHOLD_TIME_MS = 1000;
 
-    enum BirdState {
+    enum BirdState
+    {
         IDLE,
         READY_TO_ATTACK,
         ATTACKING,
@@ -17,9 +18,10 @@ public partial class Bird : CharacterBody2D
 
     private Bubble _ready_to_attack_bubble;
 
-	public override void _Process(double delta)
-	{
-        switch (_state) {
+    public override void _Process(double delta)
+    {
+        switch (_state)
+        {
             case BirdState.IDLE:
                 Velocity = new Vector2(x: -50, y: 0);
                 foreach (var body in GetNode<Area2D>("Area2D").GetOverlappingBodies())
@@ -44,12 +46,11 @@ public partial class Bird : CharacterBody2D
                 }
                 break;
             case BirdState.ATTACKING:
-                Velocity = (_ready_to_attack_bubble.GlobalPosition - GlobalPosition).Normalized()*1000.0f;
-                GD.Print(Velocity);
+                Velocity = (_ready_to_attack_bubble.GlobalPosition - GlobalPosition).Normalized() * 1000.0f;
                 break;
         }
         MoveAndCollide(Velocity * (float)delta);
-	}
+    }
 
 
     private void Play(string animationName)
