@@ -1,32 +1,53 @@
-[gd_scene load_steps=8 format=3 uid="uid://bffapesbn65jb"]
+[gd_scene load_steps=11 format=3 uid="uid://bffapesbn65jb"]
 
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="1_3wjg4"]
 [ext_resource type="Texture2D" uid="uid://cajprdahrlm6t" path="res://arts/bg/river/river.png" id="1_an3ip"]
-[ext_resource type="Texture2D" uid="uid://c6g1nhh6j1vqq" path="res://arts/bg/river/fish.png" id="3_2xqab"]
+[ext_resource type="Texture2D" uid="uid://db56xcs1va8hn" path="res://arts/bg/river/Attack.png" id="3_10hdc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_evgp3"]
-atlas = ExtResource("3_2xqab")
-region = Rect2(0, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl0at"]
+atlas = ExtResource("3_10hdc")
+region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wb0n3"]
-atlas = ExtResource("3_2xqab")
-region = Rect2(32, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w6ts"]
+atlas = ExtResource("3_10hdc")
+region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y3xoy"]
-atlas = ExtResource("3_2xqab")
-region = Rect2(64, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr4n4"]
+atlas = ExtResource("3_10hdc")
+region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8mmkp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xh03"]
+atlas = ExtResource("3_10hdc")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf268"]
+atlas = ExtResource("3_10hdc")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pir5u"]
+atlas = ExtResource("3_10hdc")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3es1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_evgp3")
+"texture": SubResource("AtlasTexture_kl0at")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wb0n3")
+"texture": SubResource("AtlasTexture_3w6ts")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y3xoy")
+"texture": SubResource("AtlasTexture_pr4n4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xh03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf268")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pir5u")
 }],
 "loop": true,
 "name": &"default",
@@ -53,6 +74,7 @@ offset = Vector2(600, 300)
 zoom = Vector2(0.5, 0.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1794, 697)
-scale = Vector2(5.90625, 5.90625)
-sprite_frames = SubResource("SpriteFrames_8mmkp")
+position = Vector2(-19, -761)
+scale = Vector2(6.35417, 6.35417)
+sprite_frames = SubResource("SpriteFrames_g3es1")
+frame_progress = 0.582078
