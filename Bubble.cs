@@ -27,22 +27,23 @@ public partial class Bubble : CharacterBody2D
 		_animationPlayer.Play("default");
 	}
 
-	public override void _PhysicsProcess(double delta)
-	{
-		Vector2 velocity = Velocity;
-		velocity.X = (float)Mathf.Lerp(velocity.X, TargetX, 0.1);
-		velocity.Y = (float)Mathf.Lerp(velocity.Y, TargetY, 0.05);
-		if (Mathf.Abs(velocity.Y) < 5)
-		{
-			velocity.Y = 0;
-			velocity.Y += 50.0f * (GD.Randf() - 0.5f);
-		}
-		Velocity = velocity;
-		MoveAndSlide();
-		for (int i = 0; i < GetSlideCollisionCount(); i++) {
-			EmitSignal(SignalName.Hit);
-		}
-	}
+    public override void _PhysicsProcess(double delta)
+    {
+        Vector2 velocity = Velocity;
+        // more = more friction
+        velocity.X = (float)Mathf.Lerp(velocity.X, TargetX, 0.9*delta);
+        velocity.Y = (float)Mathf.Lerp(velocity.Y, TargetY, 0.9*delta);
+        if (Mathf.Abs(velocity.Y) < 5)
+        {
+            velocity.Y = 0;
+            velocity.Y += 50.0f * (GD.Randf() - 0.5f);
+        }
+        Velocity = velocity;
+        MoveAndSlide();
+        for (int i = 0; i < GetSlideCollisionCount(); i++) {
+            EmitSignal(SignalName.Hit);
+        }
+    }
 	
 	public void Burst(){
 		var _animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");

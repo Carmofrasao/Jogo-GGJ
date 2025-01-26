@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://2ekjt4c2cr48"]
+[gd_scene load_steps=5 format=3 uid="uid://cfpcstt4mbnkj"]
 
 [ext_resource type="Script" path="res://objects/Planet.cs" id="1_vbo0n"]
 [ext_resource type="Texture2D" uid="uid://csu465ujgngm6" path="res://arts/Space_pixel/RedMoon.png" id="2_si8vd"]

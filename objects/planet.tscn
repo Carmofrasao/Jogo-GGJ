@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c525eqvrsiuqf"]
+[gd_scene load_steps=5 format=3 uid="uid://bw0qd26wavrsm"]
 
-[ext_resource type="Script" path="res://objects/Sun.cs" id="1_3sern"]
-[ext_resource type="Texture2D" uid="uid://bjr43j24olv3h" path="res://arts/Space_pixel/Sun.png" id="2_6c86r"]
+[ext_resource type="Script" path="res://objects/Planet.cs" id="1_unotd"]
+[ext_resource type="Texture2D" uid="uid://b0aihk5o5jdfd" path="res://arts/Space_pixel/BluePlanet.png" id="2_56x66"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8ukr"]
 radius = 44.0
@@ -9,9 +9,9 @@ radius = 44.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_tqbji"]
 radius = 800.0
 
-[node name="Sun" type="Area2D"]
+[node name="Planet" type="Area2D"]
 collision_layer = 0
-script = ExtResource("1_3sern")
+script = ExtResource("1_unotd")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2(4, 4)
@@ -23,7 +23,7 @@ metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(20, 20)
-texture = ExtResource("2_6c86r")
+texture = ExtResource("2_56x66")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_tqbji")

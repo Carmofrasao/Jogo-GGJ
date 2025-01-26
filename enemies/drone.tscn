@@ -73,7 +73,7 @@ radius = 4.94846
 height = 39.5876
 
 [node name="Drone" type="StaticBody2D"]
-scale = Vector2(8.08333, 8.08333)
+scale = Vector2(6, 6)
 collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -49,7 +49,7 @@ public partial class Attractor : Area2D
         foreach (var bubble in GetOverlappingBodies())
         {
             Vector2 velocity = ((Bubble)bubble).Velocity;
-            velocity += Factor * Vector2.Down.Rotated(rotation);
+            velocity += ((Factor < 0 ? -250.0f : 250.0f) + Factor * 5.0f) * 2f * (float)delta * Vector2.Down.Rotated(rotation);
             ((Bubble)bubble).Velocity = velocity;
         }
 
@@ -78,11 +78,11 @@ public partial class Attractor : Area2D
     {
 		if (Input.IsActionPressed("ui_left"))
 		{
-			Factor = (float)Mathf.Clamp(Factor + 100 * delta, -50, 50);
+			Factor = (float)Mathf.Clamp(Factor - 100 * delta, -50, 50);
 		}
 		if (Input.IsActionPressed("ui_right"))
 		{
-			Factor = (float)Mathf.Clamp(Factor - 100 * delta, -50, 50);
+			Factor = (float)Mathf.Clamp(Factor + 100 * delta, -50, 50);
 		}
     }
 }
