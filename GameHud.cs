@@ -5,13 +5,16 @@ public partial class GameHud : CanvasLayer
 {
     private const int UPDATE_VALUE_DIV_FACTOR = 100;
 
+    private int _lastScoreValue = 0;
     private int _scoreValue = 0;
     private Label _scoreLabel;
+    private Label _hScoreLabel;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
         this._scoreLabel = GetNode("Top").GetNode("ScoreControl").GetNode<Label>("ScoreLabel");
+        this._hScoreLabel = GetNode("Top").GetNode("ScoreControl").GetNode<Label>("HScoreLabel");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,12 +22,19 @@ public partial class GameHud : CanvasLayer
 	{
         // Text is updated in format 0000000
         this._scoreLabel.Text = this._scoreValue.ToString("D7"); 
+        this._hScoreLabel.Text = this._lastScoreValue.ToString("D7");
 	}
 
     public void Start()
     {
-        this._scoreValue = 0;
         this.Show();
+    }
+
+    public void Reset()
+    {
+        this._lastScoreValue = this._scoreValue;
+        this._scoreValue = 0;
+        this.Hide();
     }
 
     public void UpdateScore(Vector2 playerVelocity)

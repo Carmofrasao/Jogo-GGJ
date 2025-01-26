@@ -19,12 +19,13 @@ script = ExtResource("1_184hy")
 [node name="Top" type="MarginContainer" parent="."]
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 70.0
+offset_bottom = 82.0
 grow_horizontal = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_right = 30
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
 
 [node name="PauseControl" type="BoxContainer" parent="Top"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
@@ -35,15 +36,32 @@ layout_mode = 2
 texture_normal = SubResource("AtlasTexture_y7inc")
 stretch_mode = 0
 
-[node name="Pad" type="CenterContainer" parent="Top"]
+[node name="HScoreControl" type="HBoxContainer" parent="Top"]
 layout_mode = 2
 size_flags_horizontal = 6
+theme = SubResource("Theme_rw2bi")
+theme_override_constants/separation = 15
 
 [node name="ScoreControl" type="HBoxContainer" parent="Top"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme = SubResource("Theme_rw2bi")
 theme_override_constants/separation = 15
+
+[node name="HScoreIdLabel" type="Label" parent="Top/ScoreControl"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "High Score:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HScoreLabel" type="Label" parent="Top/ScoreControl"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "0000000"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="ScoreIdLabel" type="Label" parent="Top/ScoreControl"]
 layout_mode = 2

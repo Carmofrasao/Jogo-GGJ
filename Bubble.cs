@@ -9,6 +9,8 @@ public partial class Bubble : CharacterBody2D
     private const int UPDATE_SCORE_INTERVAL_MS = 100;
 
     private float _updateScoreTimer = 0;
+
+    private CanvasLayer _gameHud;
     
 	[Export]
 	public float TargetX = 0f;
@@ -29,6 +31,7 @@ public partial class Bubble : CharacterBody2D
 
 	public override void _Ready()
 	{
+        this._gameHud = this.GetNode("Camera2D").GetNode<CanvasLayer>("GAMEHUD");
 		Reset();
 	}
 	
@@ -43,7 +46,7 @@ public partial class Bubble : CharacterBody2D
 
     public void Start()
     {
-        this.GetNode("Camera2D").GetNode("GAMEHUD").Call("Start");
+        this._gameHud.Call("Start");
         this._updateScoreTimer = Time.GetTicksMsec();
     }
 
@@ -86,6 +89,7 @@ public partial class Bubble : CharacterBody2D
 		_animationPlayer.Play("burst");
 		// burst animation calls _FinishBurst()
         _bursting = true;
+        this._gameHud.Call("Reset");
 	}
 	
 	private void _FinishBurst(){
