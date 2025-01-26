@@ -1,14 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://bghrd3ht05i7w"]
 
 [ext_resource type="Script" path="res://Main.cs" id="1_gj6wp"]
-[ext_resource type="PackedScene" uid="uid://cd8a6iu6k7xlr" path="res://levels/Sky.tscn" id="2_751hm"]
+[ext_resource type="PackedScene" uid="uid://bffapesbn65jb" path="res://levels/River.tscn" id="2_0m3ev"]
 [ext_resource type="PackedScene" uid="uid://dyr8vvt3it5s4" path="res://Hud.tscn" id="3_ijcrf"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://Bubble.tscn" id="4_bvjol"]
 [ext_resource type="Script" path="res://KeyUpDownAnimationTimer.cs" id="5_a36vo"]
+[ext_resource type="PackedScene" path="res://game-hud.tscn" id="6_hgu4u"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_gj6wp")
-firstScene = ExtResource("2_751hm")
+firstScene = ExtResource("2_0m3ev")
 
 [node name="Hud" parent="." instance=ExtResource("3_ijcrf")]
 
@@ -26,8 +27,8 @@ wait_time = 0.25
 autostart = true
 script = ExtResource("5_a36vo")
 
-[connection signal="UpdateScore" from="Bubble" to="Bubble/Camera2D/GAMEHUD" method="UpdateScore"]
 [connection signal="StartGame" from="Hud" to="." method="StartGame"]
 [connection signal="BurstAnimationFinished" from="Bubble" to="." method="Reset"]
 [connection signal="Hit" from="Bubble" to="." method="GameOver"]
+[connection signal="UpdateScore" from="Bubble" to="Bubble/Camera2D/GAMEHUD" method="UpdateScore"]
 [connection signal="timeout" from="KeyUpDownAnimationTimer" to="KeyUpDownAnimationTimer" method="OnTimeout"]

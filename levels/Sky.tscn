@@ -572,11 +572,6 @@ position = Vector2(1152, 56)
 rotation = -1.57079
 Factor = 100.0
 
-[node name="Attractor41" parent="Attractor41" instance=ExtResource("8_antb3")]
-position = Vector2(1152, 72)
-rotation = -1.57079
-Factor = 100.0
-
 [node name="Attractor8" parent="." instance=ExtResource("8_antb3")]
 position = Vector2(2848, 160)
 rotation = -1.83259
@@ -593,7 +588,7 @@ position = Vector2(7712, -32)
 position = Vector2(4496, -16)
 
 [node name="Bird4" parent="." instance=ExtResource("9_ceett")]
-position = Vector2(5008, 768)
+position = Vector2(5097, 932)
 
 [node name="Bird5" parent="." instance=ExtResource("9_ceett")]
 position = Vector2(5936, -128)
@@ -612,7 +607,7 @@ position = Vector2(4064, -416)
 position = Vector2(3232, 1264)
 
 [node name="Drone4" parent="." instance=ExtResource("10_6jhh0")]
-position = Vector2(5464, 432)
+position = Vector2(5635, 820)
 
 [node name="Drone9" parent="." instance=ExtResource("10_6jhh0")]
 position = Vector2(6064, 1456)
