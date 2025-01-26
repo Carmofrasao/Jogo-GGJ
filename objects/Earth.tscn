@@ -1,0 +1,111 @@
+[gd_scene load_steps=14 format=3 uid="uid://bc14rggx7cguo"]
+
+[ext_resource type="Script" path="res://objects/Planet.cs" id="1_1e5oi"]
+[ext_resource type="Texture2D" uid="uid://bep5rp1tfcitq" path="res://arts/Space_pixel/Earth.png" id="2_rfd3j"]
+[ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="3_a71tk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d8ukr"]
+radius = 44.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqbji"]
+radius = 705.634
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2s3n"]
+atlas = ExtResource("3_a71tk")
+region = Rect2(320, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evjj4"]
+atlas = ExtResource("3_a71tk")
+region = Rect2(320, 416, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k48q6"]
+atlas = ExtResource("3_a71tk")
+region = Rect2(320, 304, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5sd5s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2s3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evjj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k48q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evjj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2s3n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26ba4"]
+atlas = ExtResource("3_a71tk")
+region = Rect2(320, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e38r4"]
+atlas = ExtResource("3_a71tk")
+region = Rect2(320, 432, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lllph"]
+atlas = ExtResource("3_a71tk")
+region = Rect2(320, 320, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dtdha"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26ba4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e38r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lllph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e38r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26ba4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Earth" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_1e5oi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(4, 4)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_d8ukr")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(20, 20)
+texture = ExtResource("2_rfd3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tqbji")
+
+[node name="KeyUp" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
+position = Vector2(0, -390)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_5sd5s")
+frame_progress = 0.706168
+
+[node name="KeyDown" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
+position = Vector2(0, -280)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_dtdha")
