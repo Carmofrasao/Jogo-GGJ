@@ -22,9 +22,10 @@ public partial class Main : Node2D
 		LoadScene(_currentScene);
 	}
 	
-	public void LoadScene(PackedScene Scene){
+	public async void LoadScene(PackedScene Scene){
 		if(_inScene){
-			_loadedScene.Free();
+			_loadedScene.QueueFree();
+			await ToSignal(_loadedScene, SignalName.TreeExited);
 			_inScene = false;
 		}
 		
@@ -61,7 +62,8 @@ public partial class Main : Node2D
 	async private void Reset(){
 		GetNode<Hud>("Hud").ShowTitleScreen();
 		if(_inScene){
-			_loadedScene.Free();
+			_loadedScene.QueueFree();
+			await ToSignal(_loadedScene, SignalName.TreeExited);
 			_inScene = false;
 		}
 		var bubble = GetNode<Bubble>("Bubble");
