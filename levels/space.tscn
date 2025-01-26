@@ -1,17 +1,19 @@
-[gd_scene load_steps=21 format=3 uid="uid://ctsv7aud7onl8"]
+[gd_scene load_steps=23 format=3 uid="uid://ctsv7aud7onl8"]
 
 [ext_resource type="Texture2D" uid="uid://dl5odiku4g3i4" path="res://arts/bg/space/Parallax100.png" id="2_cp5ra"]
 [ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
-[ext_resource type="PackedScene" path="res://objects/Planet.tscn" id="3_y231g"]
+[ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://objects/Planet.tscn" id="3_y231g"]
 [ext_resource type="PackedScene" uid="uid://bcm786vkf042k" path="res://objects/Moon.tscn" id="6_metjv"]
 [ext_resource type="PackedScene" uid="uid://vcjigvd30k2k" path="res://objects/Earth.tscn" id="6_n6djn"]
 [ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="8_fmpvr"]
 [ext_resource type="PackedScene" uid="uid://cfpcstt4mbnkj" path="res://objects/RedMoon.tscn" id="8_x2mcm"]
-[ext_resource type="PackedScene" path="res://objects/WhiteMoon.tscn" id="9_bkth4"]
+[ext_resource type="PackedScene" uid="uid://dy5b4qfjx8m0k" path="res://objects/WhiteMoon.tscn" id="9_bkth4"]
 [ext_resource type="PackedScene" uid="uid://bmjr6p6njpbjf" path="res://objects/BubblePlanet.tscn" id="10_bbnfy"]
-[ext_resource type="PackedScene" path="res://objects/PurplePlanet.tscn" id="11_5xus0"]
+[ext_resource type="PackedScene" uid="uid://b5rfsnxev01qn" path="res://objects/PurplePlanet.tscn" id="11_5xus0"]
 [ext_resource type="PackedScene" uid="uid://c525eqvrsiuqf" path="res://objects/Sun.tscn" id="12_4jgm6"]
+[ext_resource type="PackedScene" uid="uid://cr42d2j5ehmcw" path="res://objects/satellite.tscn" id="13_mcrdn"]
+[ext_resource type="PackedScene" uid="uid://uda3cxllbewi" path="res://objects/ufo.tscn" id="14_wqovj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2s3n"]
 atlas = ExtResource("8_fmpvr")
@@ -93,21 +95,6 @@ TargetX = 200.0
 position = Vector2(305, -30)
 zoom = Vector2(0.5, 0.5)
 
-[node name="Player2" parent="." instance=ExtResource("3_ttrsp")]
-visible = false
-position = Vector2(-288, 968)
-TargetX = 200.0
-
-[node name="Player3" parent="." instance=ExtResource("3_ttrsp")]
-visible = false
-position = Vector2(112, 1096)
-TargetX = 200.0
-
-[node name="Player4" parent="." instance=ExtResource("3_ttrsp")]
-visible = false
-position = Vector2(584, 1072)
-TargetX = 200.0
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -135,12 +122,15 @@ metadata/_edit_lock_ = true
 
 [node name="Planet" parent="." instance=ExtResource("3_y231g")]
 position = Vector2(613, 1195)
+scale = Vector2(1.3, 1.3)
 
 [node name="Moon" parent="." instance=ExtResource("6_metjv")]
-position = Vector2(2206, 311)
+position = Vector2(1934, 424)
+scale = Vector2(0.8, 0.8)
 
 [node name="Earth" parent="." instance=ExtResource("6_n6djn")]
-position = Vector2(3667, 1786)
+position = Vector2(4544, 1817)
+scale = Vector2(1.2, 1.2)
 
 [node name="KeyUp" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
 position = Vector2(600, 808)
@@ -155,20 +145,28 @@ sprite_frames = SubResource("SpriteFrames_k5yne")
 metadata/_edit_group_ = true
 
 [node name="RedMoon" parent="." instance=ExtResource("8_x2mcm")]
-position = Vector2(4172, 465)
+position = Vector2(3376, 1654)
+scale = Vector2(0.8, 0.8)
 
 [node name="WhiteMoon" parent="." instance=ExtResource("9_bkth4")]
-position = Vector2(5982, 1162)
+position = Vector2(4672, 658)
+scale = Vector2(0.8, 0.8)
 
 [node name="BubblePlanet" parent="." instance=ExtResource("10_bbnfy")]
 position = Vector2(12296, 1163)
 scale = Vector2(2, 2)
 
 [node name="Planet2" parent="." instance=ExtResource("11_5xus0")]
-position = Vector2(7738, 667)
+position = Vector2(7365, 1917)
+scale = Vector2(1.2, 1.2)
+
+[node name="Moon" parent="Planet2" instance=ExtResource("6_metjv")]
+position = Vector2(-571.667, -722.5)
+scale = Vector2(0.6, 0.6)
 
 [node name="Sun" parent="." instance=ExtResource("12_4jgm6")]
-position = Vector2(9728, 64)
+position = Vector2(9063, 103)
+scale = Vector2(1.2, 1.2)
 
 [node name="EndGameLabel" type="Label" parent="."]
 offset_left = 12917.0
@@ -177,6 +175,7 @@ offset_right = 13628.0
 offset_bottom = 1233.0
 theme_override_font_sizes/font_size = 60
 text = "!!!!! Bolhópolis é REAL !!!!!"
+metadata/_edit_use_anchors_ = true
 
 [node name="EndGameLabel2" type="Label" parent="."]
 offset_left = 12801.0
@@ -185,6 +184,7 @@ offset_right = 13756.0
 offset_bottom = 1372.0
 theme_override_font_sizes/font_size = 45
 text = "Onde todos se unem como uma única bolha "
+metadata/_edit_use_anchors_ = true
 
 [node name="EndGameLabel3" type="Label" parent="."]
 offset_left = 13038.0
@@ -193,3 +193,19 @@ offset_right = 13505.0
 offset_bottom = 1066.0
 theme_override_font_sizes/font_size = 45
 text = ">> Você Encontrou <<"
+metadata/_edit_use_anchors_ = true
+
+[node name="Satellite" parent="." instance=ExtResource("13_mcrdn")]
+position = Vector2(2391, 1033)
+scale = Vector2(1.5, 1.5)
+
+[node name="Satellite2" parent="." instance=ExtResource("13_mcrdn")]
+position = Vector2(4994, 1417)
+
+[node name="UFO" parent="." instance=ExtResource("14_wqovj")]
+position = Vector2(8077, 1504)
+scale = Vector2(20, 20)
+
+[node name="UFO2" parent="." instance=ExtResource("14_wqovj")]
+position = Vector2(9523, 1903)
+scale = Vector2(40, 40)
