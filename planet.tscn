@@ -83,13 +83,14 @@ animations = [{
 [node name="Planet" type="Area2D"]
 collision_layer = 0
 script = ExtResource("1_unotd")
-metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2(4, 4)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_d8ukr")
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
@@ -99,12 +100,12 @@ texture = ExtResource("1_y4lfn")
 shape = SubResource("CircleShape2D_tqbji")
 
 [node name="KeyUp" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
-position = Vector2(400, -120)
+position = Vector2(0, -390)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_5sd5s")
 frame_progress = 0.706168
 
 [node name="KeyDown" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
-position = Vector2(400, 0)
+position = Vector2(0, -280)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_dtdha")

@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://cd8a6iu6k7xlr"]
+
+[ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="1_yp3ml"]
+[ext_resource type="Texture2D" uid="uid://bqqftphax31er" path="res://arts/bg/cloud-and-sky/2.png" id="2_y45se"]
+[ext_resource type="Texture2D" uid="uid://dwvo48y4lm65l" path="res://arts/bg/cloud-and-sky/3.png" id="3_iktsl"]
+[ext_resource type="Texture2D" uid="uid://dgenoamy0m521" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_2.png" id="4_i4vsq"]
+[ext_resource type="Texture2D" uid="uid://mw0ty344sspm" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_1.png" id="5_5idbm"]
+[ext_resource type="Texture2D" uid="uid://bjp47oocij4vi" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_5.png" id="6_wq7cj"]
+[ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://attractor.tscn" id="8_34xqh"]
+[ext_resource type="PackedScene" uid="uid://ncfbd6wcxa0y" path="res://bird.tscn" id="9_5dbyp"]
+
+[node name="Sky" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(5760, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2(0, -599)
+scale = Vector2(5, 5)
+texture = ExtResource("1_yp3ml")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2(2880, -599)
+scale = Vector2(5, 5)
+texture = ExtResource("1_yp3ml")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+z_index = -1
+position = Vector2(0, 37.0001)
+scale = Vector2(5, 5)
+texture = ExtResource("1_yp3ml")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+z_index = -1
+position = Vector2(2880, 37.0001)
+scale = Vector2(5, 5)
+texture = ExtResource("1_yp3ml")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(4032, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(5, 5)
+texture = ExtResource("2_y45se")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(6800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+scale = Vector2(5, 5)
+texture = ExtResource("3_iktsl")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = 100
+motion_scale = Vector2(3, 1)
+motion_mirroring = Vector2(3500, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(0, 1375)
+scale = Vector2(9, 9)
+texture = ExtResource("4_i4vsq")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(1271, 1315)
+scale = Vector2(8.5, 8.5)
+texture = ExtResource("5_5idbm")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(-358, 1449)
+scale = Vector2(20.125, 20.125)
+texture = ExtResource("6_wq7cj")
+centered = false
+
+[node name="Attractor1" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(1746, -172)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor2" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2242, 628)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor3" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2867, -204)
+Factor = 100.0
+
+[node name="Attractor4" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3508, 170)
+Factor = 100.0
+
+[node name="Attractor5" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3803, 1191)
+rotation = -2.19562
+Factor = 100.0
+
+[node name="Attractor6" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(1387, 1038)
+rotation = -2.92692
+Factor = 100.0
+
+[node name="Attractor7" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(1504, 966)
+rotation = -2.92692
+Factor = 100.0
+
+[node name="Bird" parent="." instance=ExtResource("9_5dbyp")]
+position = Vector2(5072, 320)
