@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ynvldh8qrkao"]
+[gd_scene load_steps=24 format=3 uid="uid://ynvldh8qrkao"]
 
 [ext_resource type="Texture2D" uid="uid://e4e05xmncrrp" path="res://arts/bg/house/house.jpg" id="1_8ymun"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="2_skh1v"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dbrr0qqpmbw0v" path="res://arts/fan/fan1.png" id="4_a078m"]
 [ext_resource type="Texture2D" uid="uid://dpdh2rmjob0bs" path="res://arts/bg/house/cat2.png" id="4_sdcs2"]
 [ext_resource type="Texture2D" uid="uid://cmhh0bdalgjsj" path="res://arts/fan/fan2.png" id="5_olkyy"]
+[ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://objects/attractor.tscn" id="7_inbk1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8bbo"]
 atlas = ExtResource("3_ecjxk")
@@ -31,37 +32,37 @@ region = Rect2(64, 0, 16, 16)
 atlas = ExtResource("3_ecjxk")
 region = Rect2(80, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h3ugq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpmlg"]
 atlas = ExtResource("4_sdcs2")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vy7b1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_idcvc"]
 atlas = ExtResource("4_sdcs2")
-region = Rect2(16, 0, 16, 16)
+region = Rect2(17, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a58xr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_avrur"]
 atlas = ExtResource("4_sdcs2")
-region = Rect2(32, 0, 16, 16)
+region = Rect2(34, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b02ut"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_76rxd"]
 atlas = ExtResource("4_sdcs2")
-region = Rect2(48, 0, 16, 16)
+region = Rect2(51, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vhi61"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_txw52"]
 atlas = ExtResource("4_sdcs2")
-region = Rect2(64, 0, 16, 16)
+region = Rect2(68, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_av27i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms4q3"]
 atlas = ExtResource("4_sdcs2")
-region = Rect2(80, 0, 16, 16)
+region = Rect2(85, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mwhfl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_423sv"]
 atlas = ExtResource("4_sdcs2")
-region = Rect2(96, 0, 16, 16)
+region = Rect2(102, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hw6ym"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7gas"]
 atlas = ExtResource("4_sdcs2")
-region = Rect2(112, 0, 16, 16)
+region = Rect2(119, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjr5w"]
 animations = [{
@@ -90,28 +91,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h3ugq")
+"texture": SubResource("AtlasTexture_gpmlg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vy7b1")
+"texture": SubResource("AtlasTexture_idcvc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a58xr")
+"texture": SubResource("AtlasTexture_avrur")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b02ut")
+"texture": SubResource("AtlasTexture_76rxd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vhi61")
+"texture": SubResource("AtlasTexture_txw52")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_av27i")
+"texture": SubResource("AtlasTexture_ms4q3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mwhfl")
+"texture": SubResource("AtlasTexture_423sv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hw6ym")
+"texture": SubResource("AtlasTexture_k7gas")
 }],
 "loop": true,
 "name": &"jump",
@@ -133,25 +134,30 @@ animations = [{
 }]
 
 [node name="House" type="Node2D"]
+position = Vector2(600, -1040)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(600, -1040)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(4203, 1067)
+position = Vector2(4201.5, 1072)
+scale = Vector2(1.00031, 0.992)
 texture = ExtResource("1_8ymun")
 
 [node name="Player" parent="." instance=ExtResource("2_skh1v")]
-position = Vector2(-482, 707)
+position = Vector2(-712, 1112)
 TargetX = 400.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(305, -30)
 zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_top = -950
+limit_bottom = 1024
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2488.75, 1066.25)
+position = Vector2(2224, 1328)
 scale = Vector2(20.0313, 20.0313)
 sprite_frames = SubResource("SpriteFrames_hjr5w")
 animation = &"jump"
@@ -161,3 +167,42 @@ autoplay = "jump"
 position = Vector2(5377, 1415)
 scale = Vector2(12.6875, 12.6875)
 sprite_frames = SubResource("SpriteFrames_wnufv")
+
+[node name="Attractor" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(5448, 1216)
+rotation = -2.35619
+
+[node name="Attractor2" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(5544, 1304)
+rotation = -2.35619
+
+[node name="Attractor3" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(5832, 1016)
+rotation = -2.35619
+
+[node name="Attractor4" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(5736, 928)
+rotation = -2.35619
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(2110, 339.001)
+rotation = -3.14159
+scale = Vector2(12.6875, 12.6875)
+sprite_frames = SubResource("SpriteFrames_wnufv")
+autoplay = "default"
+
+[node name="Attractor5" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(1624, 723.001)
+rotation = -5.49778
+
+[node name="Attractor6" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(1720, 811.001)
+rotation = -5.49778
+
+[node name="Attractor7" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(2008, 523.001)
+rotation = -5.49778
+
+[node name="Attractor8" parent="." instance=ExtResource("7_inbk1")]
+position = Vector2(1912, 435.001)
+rotation = -5.49778

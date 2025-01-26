@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cd8a6iu6k7xlr"]
+[gd_scene load_steps=18 format=3 uid="uid://cd8a6iu6k7xlr"]
 
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="1_yp3ml"]
 [ext_resource type="Texture2D" uid="uid://bqqftphax31er" path="res://arts/bg/cloud-and-sky/2.png" id="2_y45se"]
@@ -8,6 +8,77 @@
 [ext_resource type="Texture2D" uid="uid://bjp47oocij4vi" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_5.png" id="6_wq7cj"]
 [ext_resource type="PackedScene" uid="uid://dkc4bee4rw8lh" path="res://objects/attractor.tscn" id="8_34xqh"]
 [ext_resource type="PackedScene" uid="uid://ncfbd6wcxa0y" path="res://enemies/bird.tscn" id="9_5dbyp"]
+[ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="9_psf8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gepsc"]
+atlas = ExtResource("9_psf8w")
+region = Rect2(304, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js6c6"]
+atlas = ExtResource("9_psf8w")
+region = Rect2(304, 432, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w547b"]
+atlas = ExtResource("9_psf8w")
+region = Rect2(304, 320, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gjx8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gepsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js6c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w547b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js6c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gepsc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skoou"]
+atlas = ExtResource("9_psf8w")
+region = Rect2(336, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xer6a"]
+atlas = ExtResource("9_psf8w")
+region = Rect2(336, 432, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igmpj"]
+atlas = ExtResource("9_psf8w")
+region = Rect2(336, 320, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c4akh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skoou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xer6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igmpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xer6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skoou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Sky" type="Node2D"]
 
@@ -259,6 +330,11 @@ rotation = -2.92692
 Factor = 100.0
 
 [node name="Attractor14" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(728, 34)
+rotation = -1.57079
+Factor = 100.0
+
+[node name="Attractor14" parent="Attractor14" instance=ExtResource("8_34xqh")]
 position = Vector2(2024, 736)
 rotation = -2.92692
 Factor = 100.0
@@ -290,3 +366,19 @@ Factor = 100.0
 
 [node name="Bird" parent="." instance=ExtResource("9_5dbyp")]
 position = Vector2(6720, 472)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(600, -816)
+zoom = Vector2(0.5, 0.5)
+
+[node name="KeyUp" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
+position = Vector2(879, -144)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_gjx8n")
+metadata/_edit_group_ = true
+
+[node name="KeyDown" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
+position = Vector2(984, -142)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_c4akh")
+metadata/_edit_group_ = true

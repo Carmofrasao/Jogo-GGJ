@@ -1,12 +1,82 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctsv7aud7onl8"]
+[gd_scene load_steps=16 format=3 uid="uid://ctsv7aud7onl8"]
 
 [ext_resource type="Texture2D" uid="uid://dl5odiku4g3i4" path="res://arts/bg/space/Parallax100.png" id="2_cp5ra"]
 [ext_resource type="Texture2D" uid="uid://bxu7dyyjfbfex" path="res://arts/bg/space/spr_stars02.png" id="2_h6pds"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="3_ttrsp"]
 [ext_resource type="PackedScene" uid="uid://bq0rdac56mbii" path="res://objects/planet.tscn" id="3_y231g"]
-[ext_resource type="Script" path="res://KeyUpDownAnimationTimer.cs" id="6_cii43"]
-[ext_resource type="PackedScene" path="res://objects/Moon.tscn" id="6_metjv"]
+[ext_resource type="PackedScene" uid="uid://bcm786vkf042k" path="res://objects/Moon.tscn" id="6_metjv"]
 [ext_resource type="PackedScene" uid="uid://vcjigvd30k2k" path="res://objects/Earth.tscn" id="6_n6djn"]
+[ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="8_fmpvr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2s3n"]
+atlas = ExtResource("8_fmpvr")
+region = Rect2(320, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evjj4"]
+atlas = ExtResource("8_fmpvr")
+region = Rect2(320, 416, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k48q6"]
+atlas = ExtResource("8_fmpvr")
+region = Rect2(320, 304, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jtlvc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2s3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evjj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k48q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evjj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2s3n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26ba4"]
+atlas = ExtResource("8_fmpvr")
+region = Rect2(320, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e38r4"]
+atlas = ExtResource("8_fmpvr")
+region = Rect2(320, 432, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lllph"]
+atlas = ExtResource("8_fmpvr")
+region = Rect2(320, 320, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5yne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26ba4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e38r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lllph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e38r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26ba4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Space" type="Node2D"]
 
@@ -65,9 +135,14 @@ position = Vector2(1613, 525)
 [node name="Earth" parent="." instance=ExtResource("6_n6djn")]
 position = Vector2(2804, 675)
 
-[node name="KeyUpDownAnimationTimer" type="Timer" parent="."]
-wait_time = 0.25
-autostart = true
-script = ExtResource("6_cii43")
+[node name="KeyUp" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
+position = Vector2(600, 808)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_jtlvc")
+metadata/_edit_group_ = true
 
-[connection signal="timeout" from="KeyUpDownAnimationTimer" to="KeyUpDownAnimationTimer" method="OnTimeout"]
+[node name="KeyDown" type="AnimatedSprite2D" parent="." groups=["AnimatedKeys"]]
+position = Vector2(600, 918)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_k5yne")
+metadata/_edit_group_ = true
