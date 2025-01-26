@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bghrd3ht05i7w"]
+[gd_scene load_steps=10 format=3 uid="uid://bghrd3ht05i7w"]
 
 [ext_resource type="Texture2D" uid="uid://dy0teobk44vcb" path="res://arts/bg/cloud-and-sky/1.png" id="1_f87vn"]
 [ext_resource type="PackedScene" uid="uid://cgwg1uyt6fqa5" path="res://bubble.tscn" id="1_quam5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dgenoamy0m521" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_2.png" id="5_s7511"]
 [ext_resource type="Texture2D" uid="uid://bjp47oocij4vi" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_5.png" id="6_tbq4b"]
 [ext_resource type="Texture2D" uid="uid://mw0ty344sspm" path="res://arts/clouds-and-wind/Clouds_white/Shape2/cloud_shape2_1.png" id="7_ya2ey"]
+[ext_resource type="PackedScene" uid="uid://eb2foawiknig" path="res://bird.tscn" id="9_crpke"]
 
 [node name="Node2D2" type="Node2D"]
 
@@ -84,7 +85,7 @@ texture = ExtResource("6_tbq4b")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("1_quam5")]
-position = Vector2(696, 712)
+position = Vector2(425, 594)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -123,3 +124,6 @@ Factor = 100.0
 position = Vector2(1504, 966)
 rotation = -2.92692
 Factor = 100.0
+
+[node name="Bird" parent="." instance=ExtResource("9_crpke")]
+position = Vector2(6238, 648)
