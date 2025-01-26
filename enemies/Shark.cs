@@ -21,6 +21,7 @@ public partial class Shark : CharacterBody2D
 	public override void _Ready()
 	{
 		_currentSpeed = MinSpeed;
+		_direction = SharkDirection.LEFT;
         //_aware = false;
         //_attacking = false;
         //_detectingPlayer = false;
@@ -42,10 +43,10 @@ public partial class Shark : CharacterBody2D
 		}
 		_currentSpeed = MinSpeed + (MaxSpeed-MinSpeed) * increaseFactor;
 		
-	if (GetTransform().X.X > MaxX) {
+		if (GlobalPosition.X > MaxX) {
 			_direction = SharkDirection.LEFT;
 			Play("default", _direction);
-		} else if (GetTransform().X.X < MinX) {
+		} else if (GlobalPosition.X < MinX) {
 			_direction = SharkDirection.RIGHT;
 			Play("default", _direction);
 		}
