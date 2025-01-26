@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c525eqvrsiuqf" path="res://objects/Sun.tscn" id="12_brw4n"]
 [ext_resource type="PackedScene" uid="uid://cr42d2j5ehmcw" path="res://objects/Satellite.tscn" id="13_lxbsv"]
 [ext_resource type="PackedScene" uid="uid://uda3cxllbewi" path="res://objects/Ufo.tscn" id="14_472c1"]
-[ext_resource type="AudioStream" path="res://sounds/other/SMWC-BabaIsYou-RocketIsDustSpace.mp3" id="15_dxvcy"]
+[ext_resource type="AudioStream" uid="uid://06630oaaag7u" path="res://sounds/other/SMWC-BabaIsYou-RocketIsDustSpace.mp3" id="15_dxvcy"]
 [ext_resource type="AudioStream" uid="uid://bxxl1kvsbyfog" path="res://sounds/sound-effects/interface/back_002.ogg" id="16_c81se"]
 [ext_resource type="AudioStream" uid="uid://4j5egq1kqq75" path="res://sounds/sound-effects/interface/maximize_008.ogg" id="17_l5rw5"]
 [ext_resource type="AudioStream" uid="uid://c7dtolvn2j8mk" path="res://sounds/sound-effects/interface/minimize_008.ogg" id="18_d3001"]

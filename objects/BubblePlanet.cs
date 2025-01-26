@@ -8,7 +8,6 @@ public partial class BubblePlanet : Area2D
 
 	public override void _Process(double delta)
 	{
-		Factor = (float)Mathf.Clamp(Factor, -30, 30);
 		QueueRedraw();
 	}
 

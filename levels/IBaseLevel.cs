@@ -13,4 +13,6 @@ public interface IBaseLevel
     public int LimitTop { get; set; }
 
     public int LimitBottom { get; set; }
+
+    public bool DisableFriction { get; set; }
 }

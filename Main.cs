@@ -43,6 +43,7 @@ public partial class Main : Node2D
 		bubble.Position = new Vector2(0, 0);
 		bubble.TargetX = level.TargetX;
 		bubble.TargetY = level.TargetY;
+        bubble.DisableFriction = level.DisableFriction;
 		bubble.Reset();
 		bubble.Start();
 		camera.LimitBottom = level.LimitBottom;

@@ -5,7 +5,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xmcul"]
 size = Vector2(20, 12.5)
 
-[node name="UFO" type="Area2D"]
+[node name="UFO" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2lxyx")

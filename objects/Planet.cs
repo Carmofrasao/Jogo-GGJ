@@ -4,17 +4,17 @@ using System;
 public partial class Planet : Area2D
 {
 	[Export]
-	public float Factor { get; set; } = 30.0f;
+	public float Factor { get; set; } = 15.0f;
 
 	public override void _Process(double delta)
 	{
 		if (Input.IsActionPressed("ui_up"))
 		{
-			Factor = (float)Mathf.Clamp(Factor + 100 * delta, -30, 30);
+			Factor = (float)Mathf.Clamp(Factor - 100 * delta, -15, 15);
 		}
 		if (Input.IsActionPressed("ui_down"))
 		{
-			Factor = (float)Mathf.Clamp(Factor - 100 * delta, -30, 30);
+			Factor = (float)Mathf.Clamp(Factor + 100 * delta, -15, 15);
 		}
 		QueueRedraw();
 	}
@@ -30,7 +30,7 @@ public partial class Planet : Area2D
 			var color = new Color(1f, 1f, 1f, 0.5f*current);
 			DrawCircle(new Vector2(0, 0), Mathf.Lerp(800.0f, 0.0f, current), color, false, 10.0f, true);
 		}
-		_elapsed += Factor;
+		_elapsed += (Factor > 0 ? 10.0f : -10.0f) + Factor;
     }
 
 	public override void _PhysicsProcess(double delta)
@@ -40,7 +40,7 @@ public partial class Planet : Area2D
 			if (body is Bubble bubble)
 			{
 				Vector2 velocity = bubble.Velocity;
-				velocity += Factor * (this.GlobalPosition - bubble.GlobalPosition).Normalized();
+				velocity += ((Factor > 0 ? 10.0f : -10.0f) + Factor) * (this.GlobalPosition - bubble.GlobalPosition).Normalized();
 				bubble.Velocity = velocity;
 			}
 		}

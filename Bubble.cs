@@ -20,6 +20,8 @@ public partial class Bubble : CharacterBody2D
 
     private bool _bursting = false;
 
+    public bool DisableFriction = false;
+
 	[Signal]
 	public delegate void HitEventHandler();
 
@@ -42,6 +44,9 @@ public partial class Bubble : CharacterBody2D
 		var _animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
 		_animationPlayer.Play("default");
         _bursting = false;
+        if (DisableFriction) {
+            Velocity = new Vector2(TargetX, TargetY);
+        }
 	}
 
     public void Start()
@@ -65,16 +70,19 @@ public partial class Bubble : CharacterBody2D
         }
 
         // more = more friction
-        velocity.X = (float)Mathf.Lerp(velocity.X, TargetX, 0.9*delta);
-        velocity.Y = (float)Mathf.Lerp(velocity.Y, TargetY, 0.9*delta);
-        if (Mathf.Abs(velocity.Y) < 5)
-        {
-            velocity.Y = 0;
-            velocity.Y += 50.0f * (GD.Randf() - 0.5f);
+        if (!DisableFriction) {
+            velocity.X = (float)Mathf.Lerp(velocity.X, TargetX, 0.9*delta);
+            velocity.Y = (float)Mathf.Lerp(velocity.Y, TargetY, 0.9*delta);
+            if (Mathf.Abs(velocity.Y) < 5)
+            {
+                velocity.Y = 0;
+                velocity.Y += 50.0f * (GD.Randf() - 0.5f);
+            }
         }
         if (_bursting) {
             velocity.X = (float)Mathf.Lerp(velocity.X, 0, 0.05*delta);
             velocity.Y = (float)Mathf.Lerp(velocity.Y, 0, 0.05*delta);
+            Velocity = velocity;
             return;
         }
         Velocity = velocity;

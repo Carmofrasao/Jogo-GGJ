@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ncfbd6wcxa0y" path="res://enemies/Bird.tscn" id="9_ceett"]
 [ext_resource type="PackedScene" uid="uid://cshoivk8bmdyj" path="res://enemies/Drone.tscn" id="10_6jhh0"]
 [ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="11_rlapw"]
-[ext_resource type="AudioStream" path="res://sounds/other/SMWC3-PockyRocky-BattleInSky.mp3" id="12_kehw3"]
+[ext_resource type="AudioStream" uid="uid://beyjfstcv5bmn" path="res://sounds/other/SMWC3-PockyRocky-BattleInSky.mp3" id="12_kehw3"]
 [ext_resource type="AudioStream" uid="uid://bxxl1kvsbyfog" path="res://sounds/sound-effects/interface/back_002.ogg" id="13_qmwe8"]
 [ext_resource type="AudioStream" uid="uid://4j5egq1kqq75" path="res://sounds/sound-effects/interface/maximize_008.ogg" id="14_r7sh0"]
 [ext_resource type="AudioStream" uid="uid://c7dtolvn2j8mk" path="res://sounds/sound-effects/interface/minimize_008.ogg" id="15_u4v2f"]
