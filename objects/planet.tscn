@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://bq0rdac56mbii"]
 
 [ext_resource type="Script" path="res://objects/Planet.cs" id="1_unotd"]
-[ext_resource type="Texture2D" uid="uid://c2rdg2ahg4gux" path="res://arts/bg/space/parallax-space-big-planet.png" id="1_y4lfn"]
+[ext_resource type="Texture2D" uid="uid://b0aihk5o5jdfd" path="res://arts/Space_pixel/BluePlanet.png" id="2_56x66"]
 [ext_resource type="Texture2D" uid="uid://ckgqwxqtgvkpq" path="res://arts/buttons/gdb-keyboard-2.png" id="3_btkbh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d8ukr"]
@@ -93,8 +93,8 @@ shape = SubResource("CircleShape2D_d8ukr")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
-texture = ExtResource("1_y4lfn")
+scale = Vector2(20, 20)
+texture = ExtResource("2_56x66")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_tqbji")

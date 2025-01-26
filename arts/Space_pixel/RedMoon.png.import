@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy2sxbhm6d1gj"
-path="res://.godot/imported/mars.png-d8e562dd8ceb5f4acaace3a1051597c8.ctex"
+uid="uid://csu465ujgngm6"
+path="res://.godot/imported/RedMoon.png-1d54f882cab6ed1d68b6256b0285ece0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arts/planets/mars.png"
-dest_files=["res://.godot/imported/mars.png-d8e562dd8ceb5f4acaace3a1051597c8.ctex"]
+source_file="res://arts/Space_pixel/RedMoon.png"
+dest_files=["res://.godot/imported/RedMoon.png-1d54f882cab6ed1d68b6256b0285ece0.ctex"]
 
 [params]
 

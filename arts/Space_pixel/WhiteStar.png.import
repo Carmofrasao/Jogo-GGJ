@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4j74j2dridsu"
-path="res://.godot/imported/sun.png-a885a74f450db7c8b7567a5ed3afa861.ctex"
+uid="uid://3cthar0rvfuf"
+path="res://.godot/imported/WhiteStar.png-d0cb0aaf1696e335e8ef3ba3cec9c1de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arts/planets/sun.png"
-dest_files=["res://.godot/imported/sun.png-a885a74f450db7c8b7567a5ed3afa861.ctex"]
+source_file="res://arts/Space_pixel/WhiteStar.png"
+dest_files=["res://.godot/imported/WhiteStar.png-d0cb0aaf1696e335e8ef3ba3cec9c1de.ctex"]
 
 [params]
 

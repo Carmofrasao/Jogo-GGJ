@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx5kl0mxbyq1y"
-path="res://.godot/imported/moon.png-0a53a47697ff0be993e3d8b41c1a11ff.ctex"
+uid="uid://bobi1mk16fs5k"
+path="res://.godot/imported/Satellite.png-7919a3593a4632296a862dc2772bcb96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arts/planets/moon.png"
-dest_files=["res://.godot/imported/moon.png-0a53a47697ff0be993e3d8b41c1a11ff.ctex"]
+source_file="res://arts/Space_pixel/Satellite.png"
+dest_files=["res://.godot/imported/Satellite.png-7919a3593a4632296a862dc2772bcb96.ctex"]
 
 [params]
 
