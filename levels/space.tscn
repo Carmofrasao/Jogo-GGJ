@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://objects/Moon.tscn" id="6_metjv"]
 [ext_resource type="PackedScene" uid="uid://vcjigvd30k2k" path="res://objects/Earth.tscn" id="6_n6djn"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Space" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_ttrsp")]
 position = Vector2(-482, 707)

@@ -24,10 +24,10 @@ public partial class Attractor : Area2D
             }
         }
         var random = _nextWinds.PickRandom();
-        var windLocation = new Vector2(
-            x: (float)Mathf.Lerp(topLeft.X, bottomRight.X, random / 16.0f),
-            y: (float)Mathf.Lerp(topLeft.Y, topLeft.Y + 10, GD.Randf())
-        );
+        var y = Factor > 0
+            ? (float)Mathf.Lerp(topLeft.Y, topLeft.Y+10, GD.Randf())
+            : (float)Mathf.Lerp(bottomRight.Y-120, bottomRight.Y-130, GD.Randf());
+        var windLocation = new Vector2(x: (float)Mathf.Lerp(topLeft.X, bottomRight.X, random / 16.0f), y);
         _nextWinds.Remove(random);
 
         var polygon = new Polygon2D
@@ -59,15 +59,30 @@ public partial class Attractor : Area2D
 
         Array<Polygon2D> toRemove = new();
         foreach (var wind in _winds) {
-            wind.Position += Factor * 10.0f * Vector2.Down * (float)delta;
-            if (wind.Position.Y+120 > bottomRight.Y) {
+            wind.Position += ((Factor < 0 ? -250.0f : 250.0f) + Factor * 5.0f) * Vector2.Down * (float)delta;
+            if (wind.Position.Y+120 > bottomRight.Y || wind.Position.Y < 0) {
                 toRemove.Add(wind);
             }
         }
+        if (_winds.Count > 10) {
+            toRemove.Add(_winds[0]);
+        }
 
-        foreach(var wind in toRemove) {
-                wind.QueueFree();
+        foreach (var wind in toRemove) {
+            wind.QueueFree();
             _winds.Remove(wind);
         }
+    }
+
+    public override void _Process(double delta)
+    {
+		if (Input.IsActionPressed("ui_left"))
+		{
+			Factor = (float)Mathf.Clamp(Factor + 100 * delta, -50, 50);
+		}
+		if (Input.IsActionPressed("ui_right"))
+		{
+			Factor = (float)Mathf.Clamp(Factor - 100 * delta, -50, 50);
+		}
     }
 }

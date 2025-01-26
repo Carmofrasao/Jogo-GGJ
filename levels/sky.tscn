@@ -16,18 +16,21 @@
 [node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(5760, 0)
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
 position = Vector2(0, -599)
 scale = Vector2(5, 5)
 texture = ExtResource("1_yp3ml")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
 position = Vector2(2880, -599)
 scale = Vector2(5, 5)
 texture = ExtResource("1_yp3ml")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
 z_index = -1
@@ -35,6 +38,7 @@ position = Vector2(0, 37.0001)
 scale = Vector2(5, 5)
 texture = ExtResource("1_yp3ml")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
 z_index = -1
@@ -42,79 +46,247 @@ position = Vector2(2880, 37.0001)
 scale = Vector2(5, 5)
 texture = ExtResource("1_yp3ml")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.75, 1)
 motion_mirroring = Vector2(4032, 0)
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 scale = Vector2(5, 5)
 texture = ExtResource("2_y45se")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(6800, 0)
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 scale = Vector2(5, 5)
 texture = ExtResource("3_iktsl")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 z_index = 100
 motion_scale = Vector2(3, 1)
 motion_mirroring = Vector2(3500, 0)
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
 position = Vector2(0, 1375)
 scale = Vector2(9, 9)
 texture = ExtResource("4_i4vsq")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
 position = Vector2(1271, 1315)
 scale = Vector2(8.5, 8.5)
 texture = ExtResource("5_5idbm")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
 position = Vector2(-358, 1449)
 scale = Vector2(20.125, 20.125)
 texture = ExtResource("6_wq7cj")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Attractor1" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(1746, -172)
+position = Vector2(3352, 256)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor31" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3352, -48.0001)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor32" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3760, 80)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor16" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2456, -272)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor27" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2496, 15.9999)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor9" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3440, -328)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor10" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3864, -192)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor17" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4208, -64.0001)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor37" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4728, -280)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor38" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4352, -360)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor35" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4144, 248)
+rotation = -0.785397
+Factor = 100.0
+
+[node name="Attractor24" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5552, 104)
+rotation = -0.507891
+Factor = 100.0
+
+[node name="Attractor25" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(6040, 504)
 rotation = -0.507891
 Factor = 100.0
 
 [node name="Attractor2" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2242, 628)
+position = Vector2(3880, 848)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor34" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3464, 1144)
+rotation = -2.09439
+Factor = 100.0
+
+[node name="Attractor18" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3272, 984)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor33" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3640, 784)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor30" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2880, 1072)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor19" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(3800, 1344)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor11" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4160, 952)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor12" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4416, 1272)
+rotation = -2.41205
+Factor = 100.0
+
+[node name="Attractor36" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4464, 920)
 rotation = -2.41205
 Factor = 100.0
 
 [node name="Attractor3" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(2867, -204)
+position = Vector2(4648, 0)
 Factor = 100.0
 
 [node name="Attractor4" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3508, 170)
+position = Vector2(5156, 322)
+Factor = 100.0
+
+[node name="Attractor20" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4880, 496)
 Factor = 100.0
 
 [node name="Attractor5" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(3803, 1191)
+position = Vector2(5451, 1343)
+rotation = -2.19562
+Factor = 100.0
+
+[node name="Attractor22" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5240, 968)
+rotation = -2.19562
+Factor = 100.0
+
+[node name="Attractor39" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5184, 1248)
+rotation = -2.19562
+Factor = 100.0
+
+[node name="Attractor23" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(5024, 280)
+rotation = -2.19562
+Factor = 100.0
+
+[node name="Attractor21" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(4736, 1368)
 rotation = -2.19562
 Factor = 100.0
 
 [node name="Attractor6" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(1387, 1038)
+position = Vector2(2680, 808)
+rotation = -2.92692
+Factor = 100.0
+
+[node name="Attractor13" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2328, 584)
+rotation = -2.92692
+Factor = 100.0
+
+[node name="Attractor26" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2504, 736)
+rotation = -2.92692
+Factor = 100.0
+
+[node name="Attractor14" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2024, 736)
 rotation = -2.92692
 Factor = 100.0
 
 [node name="Attractor7" parent="." instance=ExtResource("8_34xqh")]
-position = Vector2(1504, 966)
-rotation = -2.92692
+position = Vector2(2856, 216)
+rotation = -1.83259
+Factor = 100.0
+
+[node name="Attractor28" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2920, 416)
+rotation = -1.83259
+Factor = 100.0
+
+[node name="Attractor29" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2864, 680)
+rotation = -1.83259
+Factor = 100.0
+
+[node name="Attractor15" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2048, 48)
+rotation = -1.83259
+Factor = 100.0
+
+[node name="Attractor8" parent="." instance=ExtResource("8_34xqh")]
+position = Vector2(2808, -24)
+rotation = -1.83259
 Factor = 100.0
 
 [node name="Bird" parent="." instance=ExtResource("9_5dbyp")]
-position = Vector2(5072, 320)
+position = Vector2(6720, 472)

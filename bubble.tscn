@@ -1,7 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgwg1uyt6fqa5"]
+[gd_scene load_steps=12 format=3 uid="uid://cgwg1uyt6fqa5"]
 
 [ext_resource type="Script" path="res://Bubble.cs" id="1_nejcm"]
-[ext_resource type="Texture2D" uid="uid://dkuvfd8wlypl3" path="res://arts/bubble-water.png" id="2_g02u1"]
+[ext_resource type="Texture2D" uid="uid://dvkbgl55hpfy6" path="res://arts/bubble/bubble-burst-1.png" id="2_yn0xj"]
+[ext_resource type="Texture2D" uid="uid://cxt4j2t6gibas" path="res://arts/bubble/bubble-burst-2.png" id="3_r2xeb"]
+[ext_resource type="Texture2D" uid="uid://i15ys70dl6fg" path="res://arts/bubble/bubble-burst-3.png" id="4_cctds"]
+[ext_resource type="Texture2D" uid="uid://ckjsnocgcxmef" path="res://arts/bubble/bubble-burst-4.png" id="5_jpmro"]
+[ext_resource type="Texture2D" uid="uid://cghwudesfl2hw" path="res://arts/bubble/bubble-3.png" id="6_2xl8k"]
+[ext_resource type="Texture2D" uid="uid://d3cfqy8e64byd" path="res://arts/bubble/bubble-2.png" id="7_nys3m"]
+[ext_resource type="Texture2D" uid="uid://qwnsvk7t4scw" path="res://arts/bubble/bubble-1.png" id="8_1mm7q"]
+[ext_resource type="Texture2D" uid="uid://ddhebpsf18qiw" path="res://arts/bubble/bubble-4.png" id="9_qgqnr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h7d1v"]
 radius = 32.0
@@ -10,11 +17,37 @@ radius = 32.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_g02u1")
+"texture": ExtResource("2_yn0xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r2xeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cctds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jpmro")
+}],
+"loop": true,
+"name": &"burst",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("6_2xl8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nys3m")
+}, {
+"duration": 9.0,
+"texture": ExtResource("8_1mm7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qgqnr")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Bubble" type="CharacterBody2D"]
@@ -28,3 +61,5 @@ shape = SubResource("CircleShape2D_h7d1v")
 position = Vector2(9.53674e-07, 9.53674e-07)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_d31xh")
+autoplay = "default"
+frame_progress = 0.879898

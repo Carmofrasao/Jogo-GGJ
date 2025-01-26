@@ -17,7 +17,8 @@ position = Vector2(425, 594)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Bubble"]
-offset = Vector2(600, 300)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.75, 0.75)
+limit_top = -572
+limit_bottom = 1600
 
 [connection signal="StartGame" from="HUD" to="." method="StartGame"]

@@ -8,6 +8,7 @@ size = Vector2(128, 405)
 [node name="Attractor" type="Area2D"]
 position = Vector2(-32, -32)
 script = ExtResource("1_3806c")
+Factor = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(32, 202.5)
