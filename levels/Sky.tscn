@@ -681,7 +681,7 @@ position = Vector2(1028, 557)
 rotation = -1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinFlag"]
-position = Vector2(54.9397, 78.6849)
+position = Vector2(30.9722, 7671)
 rotation = 1.56794
 shape = SubResource("RectangleShape2D_1a6my")
 

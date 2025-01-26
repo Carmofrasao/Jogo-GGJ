@@ -20,9 +20,10 @@ public partial class Sky : Node2D, IBaseLevel
 	public int LimitBottom { get; set; } = 1600;
 	
 	public void _on_win_flag(Node2D other){
-		if(_oneShotTransition)
+		if(_oneShotTransition) {
 			_oneShotTransition = false;
-		WinScene();
+		    WinScene();
+        }
 	}
 	
 	public void WinScene(){

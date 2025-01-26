@@ -23,7 +23,8 @@ public partial class Main : Node2D
 	}
 	
 	public async void LoadScene(PackedScene Scene){
-		if(_inScene){
+		GD.Print("Loading scene " + Scene);
+		if(_inScene) {
 			_loadedScene.QueueFree();
 			await ToSignal(_loadedScene, SignalName.TreeExited);
 			_inScene = false;

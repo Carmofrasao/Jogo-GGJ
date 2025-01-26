@@ -21,9 +21,10 @@ public partial class River : Node2D, IBaseLevel
 	public int LimitBottom { get; set; } = 384;
 	
 	public void _on_win_flag(Node2D other){
-		if(_oneShotTransition)
+		if(_oneShotTransition) {
 			_oneShotTransition = false;
-		WinScene();
+		    WinScene();
+        }
 	}
 	
 	public void WinScene(){
