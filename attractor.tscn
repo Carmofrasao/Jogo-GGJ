@@ -14,3 +14,15 @@ polygon = PackedVector2Array(0, 40, 24, 40, 24, 64, 40, 64, 40, 40, 64, 40, 64, 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(31, 195)
 shape = SubResource("RectangleShape2D_boldo")
+
+[node name="WindLocationA" type="Marker2D" parent="."]
+position = Vector2(-11, 64)
+
+[node name="WindLocationB" type="Marker2D" parent="."]
+position = Vector2(72, 381)
+
+[node name="WindTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="WindTimer" to="." method="WindSpawn"]
