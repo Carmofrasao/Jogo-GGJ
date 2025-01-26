@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://di0s1oly2x2hm"]
+
+[ext_resource type="Script" path="res://enemies/Fish.cs" id="1_mg882"]
+[ext_resource type="Texture2D" uid="uid://bhbdmemth8cb5" path="res://arts/bg/river/fishs.png" id="1_p1mtx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_563dq"]
+radius = 112.0
+height = 472.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mymrh"]
+atlas = ExtResource("1_p1mtx")
+region = Rect2(144, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jwqp"]
+atlas = ExtResource("1_p1mtx")
+region = Rect2(192, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqico"]
+atlas = ExtResource("1_p1mtx")
+region = Rect2(240, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uncmp"]
+atlas = ExtResource("1_p1mtx")
+region = Rect2(144, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3hhw"]
+atlas = ExtResource("1_p1mtx")
+region = Rect2(192, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hos5d"]
+atlas = ExtResource("1_p1mtx")
+region = Rect2(240, 288, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jrmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mymrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jwqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqico")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uncmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3hhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hos5d")
+}],
+"loop": true,
+"name": &"rigth",
+"speed": 5.0
+}]
+
+[node name="Fish6" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_mg882")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(-20, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_563dq")
+one_way_collision_margin = 0.0
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 2.74798)
+
+[node name="DetectionBox" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(0, -20, 0, 20, 960, 139.739, 960, -139.739)
+
+[node name="FishAnimation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.88542, 2.88542)
+sprite_frames = SubResource("SpriteFrames_1jrmd")
+animation = &"rigth"
