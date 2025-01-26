@@ -118,7 +118,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_c32s6"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnufv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -158,8 +158,6 @@ animation = &"jump"
 autoplay = "jump"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(5373, 1390)
-scale = Vector2(14.5, 14.5)
-sprite_frames = SubResource("SpriteFrames_c32s6")
-autoplay = "default"
-frame_progress = 0.186897
+position = Vector2(5377, 1415)
+scale = Vector2(12.6875, 12.6875)
+sprite_frames = SubResource("SpriteFrames_wnufv")
